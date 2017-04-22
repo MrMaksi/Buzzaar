@@ -1,0 +1,91 @@
+.form-container {
+    background: #f8f8f8;
+    padding: 47px 96px 60px 96px;
+}
+.form-group { margin-bottom: 19px; }
+.control-label {
+    font-weight: 300;
+    display: block;
+    margin-bottom: -1px;
+}
+.form-control {
+    border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+    height: 48px;
+    border-color: #cccccc;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    padding-left: 17px; padding-right: 17px;
+}
+textarea.form-control {
+    height: 154px;
+}
+.select-styled {
+    position: relative;
+}
+.select-styled:before {
+    right: 1px; top: 1px;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 42px; height: 46px;
+    background: #fff;
+}
+.select-styled:after {
+    position: absolute;
+    font-size: 10px;
+    color: #000;
+    pointer-events: none;
+    right: 17px; top: 21px;
+    background: #fff;
+    content: "\e114";
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+.form-container .btn { width: 267px; }
+
+
+@media screen and (max-width: 1050px) { /*--style for 768px--*/
+    .form-container {
+        padding: 23px 71px 32px 71px;
+    }
+    .control-label { margin-bottom: -2px; }
+    .form-group { margin-bottom: 20px; }
+    .form-container .btn {
+        height: 48px;
+        font-size: 20px;
+        margin-top: 4px;
+        padding-top: 9px; padding-bottom: 9px;
+        letter-spacing: 1px;
+    }
+    .form-container .ico-arrow-right-small {
+        top: 18px; right: 15px;
+    }
+}
+
+@media screen and (max-width: 760px) { /* for 420 */
+    .standart-inner-section {
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 60px;
+        margin-bottom: 18px;
+    }
+    .form-container {
+        margin-left: -27px; margin-right: -27px;
+        padding: 29px 27px 48px 27px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-container .btn {
+        height: 50px;
+        padding-top: 12px; padding-bottom: 11px;
+        letter-spacing: 1px;
+        font-size: 17px;
+        margin-top: 20px;
+        width: 100%; max-width: 450px;
+        margin-left: auto; margin-right: auto;
+        display: block;
+    }
+    .form-container .ico-arrow-right-small { top: 19px; }
+}
+

@@ -1,0 +1,187 @@
+.slider-review {
+  margin-top: -10px;
+  padding-bottom: 44px;
+}
+.slider-review .container, .slider-review-people .container {
+  position: relative;
+}
+.swiper-container {
+  width: 100%; height: 100%;
+}
+.swiper-slide {
+  font-size: 17px;
+  line-height: 1.65;
+  background: #fff;
+  padding: 0 60px;
+}
+.swiper-slide .img-box {
+  width: 280px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.swiper-slide .img-box img {
+  display: block;
+  margin: 0 auto
+}
+.swiper-slide .text-box {
+  padding-left: 45px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.swiper-slide h4 {
+  font-size: 17px;
+  margin-bottom: 18px; margin-top: 12px;
+  text-transform: none;
+  font-family: 'Roboto', Arial, Verdana, sans-serif;
+}
+.review-next, .review-prev {
+  width: 30px;
+  height: 100%;
+  top: 0; margin-top: 0;
+  background: #fff;
+  position: absolute;
+}
+.review-next { right: 15px }
+.review-prev { left: 15px }
+.review-next:after, .review-prev:after {
+  width: 21px; height: 69px;
+  background: #fff url("../img/slide-arrow.png") 0 0 no-repeat;
+  margin-top: -34px;
+  top: 50%;
+  position: absolute;
+  content: '';
+}
+.review-prev:after { left: 3px; }
+.review-next:after {
+  background-position: 100% 0;
+  right: 3px;
+}
+.swiper-review .img-circle {
+  padding: 8px;
+  border: 1px solid #e7e7e7;
+  max-width: 178px;
+  float: right;
+}
+.slider-review-people {
+  font-size: 18px;
+}
+.slider-review-people h4 {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+.slider-review-people p {
+  line-height: 1.78;
+}
+
+
+@media screen and (max-width: 1050px) { /*--style for 768px--*/
+  .slider-review {
+    border-bottom: 0;
+    padding-bottom: 18px;
+  }
+  .swiper-slide {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-right: 0; padding-left: 0;
+  }
+  .swiper-slide h4 {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 9px;
+  }
+  .swiper-slide .img-box {
+    width: 195px;
+    padding-left: 25px;
+  }
+  .swiper-slide .text-box {
+    padding-left: 46px; padding-right: 40px;
+  }
+  .review-next, .review-prev { width: 25px; }
+  .review-next:after, .review-prev:after {
+    width: 14px; height: 48px;
+    margin-top: -24px;
+    background-size: 40px auto; -webkit-background-size: 40px auto;
+  }
+    .swiper-review .img-circle {
+        max-width: 166px;
+        float: none;
+        margin: 0 auto;
+    }
+    .slider-review-people p { line-height: 1.5; }
+    .slider-review-people h4 {
+        margin-bottom: 6px;
+    }
+    .slider-review-people .img-box {
+        width: 244px;
+        padding: 0;
+    }
+    .slider-review-people .text-box {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 760px) { /* for 420 */
+  .slider-review {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 79px;
+    margin-bottom: 18px;
+  }
+  .swiper-slide {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .swiper-slide .img-box {
+    width: 100%;
+    padding-left: 0;
+    display: block;
+    margin-bottom: 17px;
+    height: 179px;
+  }
+  .swiper-slide .img-box img { max-height: 179px; }
+  .swiper-slide h4 {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 17px;
+  }
+  .review-next:after, .review-prev:after {
+    margin-top: 0;
+    top: 66px;
+  }
+    .slider-review-people .review-next:after, .slider-review-people.review-prev:after {
+        margin-top: 0;
+        top: 66px;
+    }
+    .review-next {
+        right: 21px;
+        height: 180px; width: 35px;
+    }
+    .review-next:after { right: 18px; }
+    .review-prev {
+        left: 21px;
+        height: 180px; width: 35px;
+    }
+    .review-prev:after { left: 18px; }
+    .swiper-slide .text-box {
+        padding-left: 45px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .swiper-review .img-circle {
+        max-width: 178px;
+    }
+    .swiper-slide .text-box {
+        padding-left: 27px; padding-right: 27px;
+        display: block;
+    }
+    .slider-review-people {
+        margin-bottom: 18px;
+    }
+    .slider-review-people {
+        padding-bottom: 77px;
+    }
+    .slider-review-people .img-box { margin-bottom: 38px; }
+    .slider-review-people p { line-height: 1.59; }
+    .slider-review-people h4 { margin-bottom: 8px; }
+}
+

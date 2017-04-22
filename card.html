@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buzzaar</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <!--TODO Please concat all stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popup.css"/>
+    <link rel="stylesheet" type="text/css" href="css/promo-box.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slide.css"/>
+    <link rel="stylesheet" type="text/css" href="css/action-list.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container-fluid">
+    <header class="main-head">
+        <div class="container clearfix">
+            <div class="logo-box">
+                <a href="#">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+            <div class="right-head clearfix">
+                <div class="fl-right nav-link change-status">
+                    <a href="#" id="dClient" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="active-bg">I’m a client</span><span
+                            class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dClient">
+                        <li><a href="#">I’M AN AGENT</a></li>
+                    </ul>
+                </div>
+                <div class="fl-right nav-link change-country">
+                    <a href="#" id="countryDrop" data-target="#" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">
+                        <span class="ico-lang ico-lang-small ru"></span>RU<span
+                            class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-country" aria-labelledby="countryDrop">
+                        <div class="container">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang ru"></span>РОССИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang ua"></span>УКРАИНА</a></li>
+                                <li><a href="#"><span class="ico-lang by"></span>БЕЛАРУСЬ</a></li>
+                                <li><a href="#"><span class="ico-lang lt"></span>ЛИТВА</a></li>
+                                <li><a href="#"><span class="ico-lang lv"></span>ЛАТВИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang et"></span>ЭСТОНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang kz"></span>КАЗАХСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang am"></span>АРМЕНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang az"></span>АЗЕРБАЙДЖАН</a></li>
+                                <li><a href="#"><span class="ico-lang ge"></span>ГРУЗИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang uz"></span>УЗБЕКИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang tj"></span>ТАДЖИКИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang tm"></span>ТУРКМЕНИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang kg"></span>КИРГИЗИЯ</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang ro"></span>РУМЫНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang md"></span>МОЛДОВА</a></li>
+                                <li><a href="#"><span class="ico-lang bg"></span>БОЛГАРИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang rs"></span>СЕРБИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang hr"></span>ХОРВАТИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang si"></span>СЛОВЕНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang ba"></span>БОСНИЯ И ГЕРЦЕГОВИНА</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang pl"></span>ПОЛЬША</a></li>
+                                <li><a href="#"><span class="ico-lang tr"></span>ТУРЦИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang cz"></span>ЧЕХИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang sk"></span>СЛОВАКИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang hu"></span>ВЕНГРИЯ</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang nl"></span>НИДЕРЛАНДЫ</a></li>
+                                <li><a href="#"><span class="ico-lang mt"></span>МАЛЬТА</a></li>
+                                <li><a href="#"><span class="ico-lang be"></span>БЕЛЬГИЯ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl-right nav-link show-logout">
+                    <a href="#" data-toggle="modal" data-target="#loginModal">
+                        <span class="ico ico-login"></span><span class="link-text">Login</span>
+                    </a>
+                </div>
+                <nav class="fl-right ">
+                    <ul class="main-menu clearfix">
+                        <li><a href="#">ABOUT US</a></li>
+                        <li class="active"><a href="#">PROMOS</a></li>
+                        <li><a href="#">REVIEWS</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div data-sidebar="true" class="sidebar-trigger sidebar-right">
+                 <span class="mobile-menu-ico sidebar-toggle show-mb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <div class="sidebar-wrapper sidebar-default ">
+                    <div class="sidebar-scroller">
+                        <div class="sidebar-head">
+                            <a href="#" data-toggle="modal" data-target="#loginModal">
+                                <span class="ico ico-login"></span><span class="link-text">Login</span>
+                            </a>
+                            <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li><a href="#">ABOUT US</a></li>
+                            <li class="active"><a href="#">PROMOS</a></li>
+                            <li><a href="#">REVIEWS</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <div class="sidebar-footer">
+                            <div class="nav-link change-lang">
+                                <a href="#" data-toggle="modal" data-target="#countryModal">
+                                    <span></span>RUSSIA<span class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                            <div class="nav-link change-country">
+                                <a href="#">
+                                    RU<span class="ico-lang ru"></span><span
+                                        class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                            <div class="nav-link change-status">
+                                <a href="#" id="dClient" data-target="#" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <span class="active-bg">I’m a client</span><span
+                                        class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+<section class="top-profile text-center">
+    <div class="container">
+        <img src="./img/profile-img.png" alt="Profile">
+        <div class="top-profile_wrapper">
+            <div class="status">
+                <p>status: <span>Newbie</span></p>
+                <span>|</span>
+                <p>profile completed: <span>35%</span></p>
+            </div>
+            <div class="name">
+                <h2>IEVGEN VIETROV</h2>
+                <p class="count">2323 <i class="icon bonus white">&nbsp;</i></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="menu-wrapper">
+            <ul>
+                <li class="active">
+                    <a href="#">Моя карта</a>
+                </li>
+                <li>
+                    <a href="#">Моя анкета</a>
+                </li>
+                <li>
+                    <a href="#">Мои акции</a>
+                </li>
+                <li>
+                    <a href="#">Обучение</a>
+                </li>
+                <li>
+                    <a href="#">Помощь</a>
+                </li>
+                <li>
+                    <a href="#">Пригласить друга</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section class="yourCard">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="card" src="./img/yourCard.png" alt="Your Card">
+            </div>
+            <div class="col-md-9">
+                <h3>Это твоя карта Buzzaar</h3>
+                <p class="count">НА НЕЙ СЕЙЧАС <span>2323</span> <i class="icon bonus pink">&nbsp;</i></p>
+
+                <p>Карта создана для того, чтобы накапливать на нее баллы-баззарчики: чем больше баллов – тем выше
+                    вероятность подтверждения вашей анкеты для участия в акции.</p>
+                <p>Вы можете накапливать баллы, совершая различные действия на сайте, участвуя в акциях, приглашая
+                    друзей. Посмотрите, какие <a href="#">действия</a> вы можете предпринять для увеличения количества
+                    баллов на карте
+                    уже сейчас, а также посмотрите, какой у вас сейчас <a href="#">статус</a> и куда вам двигаться
+                    дальше.</p>
+            </div>
+        </div>
+    </section>
+    <section class="history">
+        <h3>История начисления</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Кол-во баллов</th>
+                        <th>Событие</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>15.11.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>14.11.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>08.11.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>03.11.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>27.10.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>24.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>21.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>20.09.2016</td>
+                        <td>10</td>
+                        <td>Шеринг акции Super Braun Series 3</td>
+                    </tr>
+                    <tr>
+                        <td>19.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>18.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>18.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Кол-во баллов</th>
+                        <th>Событие</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>18.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>18.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>16.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>15.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>14.09.2016</td>
+                        <td>10</td>
+                        <td>Шеринг акции Braun Series 3</td>
+                    </tr>
+                    <tr>
+                        <td>14.09.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>29.08.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>20.08.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>28.07.2016</td>
+                        <td>1</td>
+                        <td>Вход на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>28.07.2016</td>
+                        <td>100</td>
+                        <td>Регистрация на сайте</td>
+                    </tr>
+                    <tr>
+                        <td>28.07.2016</td>
+                        <td>1</td>
+                        <td>и подтверждение email</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="active">
+                    <a href="#"><i class="arrow first">&nbsp;</i>PREV</a>
+                </li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#"><i class="arrow first">&nbsp;</i>next</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript" src="js/inc-swiper.js"></script>
+
+
+<div class="box-bnr text-center">
+    <a href="#"><img src="img/img1.jpg"></a>
+</div>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="socials-box">
+            <ul class="socials clearfix">
+                <li class="vk"><a href="#"></a></li>
+                <li class="inst"><a href="#"></a></li>
+                <li class="fb"><a href="#"></a></li>
+                <li class="tw"><a href="#"></a></li>
+            </ul>
+        </div>
+        <span class="copy">© BUZZAAR HOLDING LIMITED, 2006–2016</span>
+        <span>Some materials may be intended for persons over 16 years.</span>
+        <span>The member of WOMMA.</span>
+        <div class="womma-logo">
+            <span>OUR PARTNER</span>
+            <a href="#"><img src="img/womma.png" width="148"></a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog cookies-modal" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <h4>САЙТ BUZZAAR ИСПОЛЬЗУЕТ COOKIES ВАШЕГО БРАУЗЕРА</h4>
+                <p>Мы используем файлы «cookies» для хранения информации на вашем компьютере с целью настройки и
+                    улучшения пользования нашим сайтом для вас.<br> Чтобы узнать больше о файлах «cookies», которые мы
+                    используем ознакомьтесь с нашей <a href="#">политикой конфиденциальности</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div tabindex="-1" id="loginModal" class="modal fade">
+    <div role="document" class="modal-dialog">
+        <div class="modal-content">
+            <span class="popup-img popup-img_item1"></span>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <span class="popup-img popup-img_item1 show-mb"></span>
+                <div class="btn-group">
+                    <button type="button" class="btn waves-effect waves-light btn-social btn-login-fb"><span
+                            class="ico fb-ico"></span>FACEBOOK
+                    </button>
+                    <button type="button" class="btn waves-effect waves-light btn-social btn-login-vk"><span
+                            class="ico vk-ico"></span>VKONTAKTE
+                    </button>
+                </div>
+                <div class="social-form-text text-center">или</div>
+                <form>
+                    <div class="form-group">
+                        <label for="input-mail">E-mail</label>
+                        <input placeholder="" value="evgeniy.vetrov.designer@gmail.com" id="input-mail"
+                               class="form-control" type="email">
+                        <span class="error-text">Email is required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-password">Пароль</label>
+                        <div class="box-relative">
+                            <input placeholder="" value="************" id="input-password" class="form-control"
+                                   type="password">
+                            <div class="text-right forgot-link"><a href="#" class="text-bold" data-toggle="modal"
+                                                                   data-dismiss="modal" data-target="#forgotModal">Забыли
+                                пароль?</a></div>
+                        </div>
+                        <span class="error-text">Password is required</span>
+                    </div>
+                    <div class="btn-bottom">
+                        <p class="text-right reg-text">
+                            Новый пользователь? <br><a href="#" class="text-bold">Регистрация</a>
+                        </p>
+                        <button type="button" class="btn waves-effect waves-light btn-white">ВОЙТИ<span
+                                class="ico ico-arrow-right-small"></span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" id="forgotModal" class="modal fade ">
+    <div role="document" class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <span class="popup-img popup-img_item2"></span>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <span class="popup-img popup-img_item2 show-mb"></span>
+                <h1 class="text-center">Забыли пароль?<br> Не проблема</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="input-mail">E-mail</label>
+                        <input placeholder="" value="evgeniy.vetrov.designer@gmail.com" id="input-mail"
+                               class="form-control" type="email">
+                        <span class="error-text">Email is required</span>
+                    </div>
+                    <button type="button" class="btn waves-effect waves-light btn-full btn-white">ПОЛУЧИТЬ НОВЫЙ
+                        ПАРОЛЬ<span class="ico ico-arrow-right-small"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar-overlay"></div>
+</body>
+</html>

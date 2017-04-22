@@ -1,0 +1,139 @@
+//global variables
+$roboto: 'font-family: ' Roboto ', Arial, Verdana, sans-serif';
+$robotoCodensed: 'Roboto Condensed', Arial, Verdana, sans-serif;
+$ruby: #ec087a;
+$turquoise: #2febd1;
+$white: #f4f4f4;
+$whiteSmoke: #f8f8f8;
+$nightRider: #333;
+$mercury: #e5e5e5;
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  &.bonus {
+    width: 17px;
+    height: 25px;
+    &.white {
+      background-image: url(../img/icon-bonus_white.png);
+    }
+    &.pink {
+      background-image: url(../img/icon-bonus_pink.png);
+    }
+  }
+}
+
+.menu-wrapper {
+  ul {
+    padding: 0;
+    text-align: center;
+    margin: 15px 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:not(.active) {
+      border-bottom: 1px solid $ruby;
+      a {
+        color: $ruby;
+      }
+    }
+    &.active {
+      position: relative;
+      &:before {
+        background: url("../img/bg-head.svg") 0 0 no-repeat;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-size: cover;
+        z-index: -1;
+        height: 100%;
+      }
+
+    }
+    a {
+      font-weight: 700;
+    }
+  }
+}
+
+//TODO cardPage
+.top-profile {
+  background-color: $whiteSmoke;
+  text-align: center;
+  img {
+    vertical-align: middle;
+  }
+  &_wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .status {
+    p {
+      display: inline-block;
+      font-size: 17px;
+      text-transform: uppercase;
+      margin: 0;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  .name {
+    > * {
+      display: inline-block;
+    }
+    h2 {
+      margin: 0;
+      vertical-align: middle;
+    }
+    .count {
+      background-color: $ruby;
+      vertical-align: middle;
+      font-size: 26px;
+      color: #fff;
+      border-radius: 50px;
+      padding: 13px 18px;
+    }
+  }
+}
+
+.yourCard {
+  .count {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+    span {
+      color: $ruby;
+      font-size: 29px;
+    }
+  }
+  a {
+    color: $ruby;
+    text-decoration: underline;
+  }
+}
+
+.history {
+  .table {
+    thead {
+      background-color: $mercury;
+    }
+    > tbody {
+      > tr {
+        background-color: $whiteSmoke;
+        >td{
+          border-top: 2px solid #fff;
+        }
+      }
+    }
+  }
+}

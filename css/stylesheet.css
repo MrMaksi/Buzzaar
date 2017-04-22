@@ -1,0 +1,93 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat; }
+  .icon.bonus {
+    width: 17px;
+    height: 25px; }
+    .icon.bonus.white {
+      background-image: url(../img/icon-bonus_white.png); }
+    .icon.bonus.pink {
+      background-image: url(../img/icon-bonus_pink.png); }
+
+.menu-wrapper ul {
+  padding: 0;
+  text-align: center;
+  margin: 15px 0; }
+
+.menu-wrapper li {
+  display: inline-block;
+  margin: 0 10px; }
+  .menu-wrapper li:first-child {
+    margin-left: 0; }
+  .menu-wrapper li:last-child {
+    margin-right: 0; }
+  .menu-wrapper li:not(.active) {
+    border-bottom: 1px solid #ec087a; }
+    .menu-wrapper li:not(.active) a {
+      color: #ec087a; }
+  .menu-wrapper li.active {
+    position: relative; }
+    .menu-wrapper li.active:before {
+      background: url("../img/bg-head.svg") 0 0 no-repeat;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      background-size: cover;
+      z-index: -1;
+      height: 100%; }
+  .menu-wrapper li a {
+    font-weight: 700; }
+
+.top-profile {
+  background-color: #f8f8f8;
+  text-align: center; }
+  .top-profile img {
+    vertical-align: middle; }
+  .top-profile_wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left; }
+  .top-profile .status p {
+    display: inline-block;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin: 0; }
+    .top-profile .status p span {
+      font-weight: 700; }
+  .top-profile .name > * {
+    display: inline-block; }
+  .top-profile .name h2 {
+    margin: 0;
+    vertical-align: middle; }
+  .top-profile .name .count {
+    background-color: #ec087a;
+    vertical-align: middle;
+    font-size: 26px;
+    color: #fff;
+    -webkit-border-radius: 50px;
+            border-radius: 50px;
+    padding: 13px 18px; }
+
+.yourCard .count {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px; }
+  .yourCard .count span {
+    color: #ec087a;
+    font-size: 29px; }
+
+.yourCard a {
+  color: #ec087a;
+  text-decoration: underline; }
+
+.history .table thead {
+  background-color: #e5e5e5; }
+
+.history .table > tbody > tr {
+  background-color: #f8f8f8; }
+  .history .table > tbody > tr > td {
+    border-top: 2px solid #fff; }
+
+/*# sourceMappingURL=maps/stylesheet.css.map */
