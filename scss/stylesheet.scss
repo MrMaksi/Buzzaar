@@ -1,4 +1,3 @@
-//global variables
 $roboto: 'Roboto', Arial, Verdana, sans-serif;
 $robotoCodensed: 'Roboto Condensed', Arial, Verdana, sans-serif;
 $ruby: #ec087a;
@@ -175,7 +174,7 @@ $mercury: #e5e5e5;
 }
 
 .top-profile {
-  //TODO margin-top: -45px - please fix main menu height!!!
+  //TODO margin-top: -45px -- please fix main menu height!!! base.css line 193
   margin-top: -45px;
   padding: 32px 0 53px;
   background-color: $whiteSmoke;
@@ -214,7 +213,6 @@ $mercury: #e5e5e5;
       text-transform: uppercase;
       font-size: 17px;
       line-height: 17px;
-
       span {
         font-weight: 700;
       }
@@ -380,7 +378,6 @@ $mercury: #e5e5e5;
       font-size: 13px;
       > tr {
         background-color: $whiteSmoke;
-
         > td {
           border-top: 2px solid #fff;
           &:nth-child(1) {
@@ -469,7 +466,24 @@ $mercury: #e5e5e5;
           }
         }
       }
+      i[data-toggle=popover] {
+        cursor: pointer;
+      }
     }
+  }
+}
+
+.popover {
+  border-radius: 0;
+  background-color: $turquoise;
+}
+
+.popover {
+  &.top > .arrow:after {
+    border-top-color: $turquoise;
+  }
+  &.left > .arrow:after {
+    border-left-color: $turquoise;
   }
 }
 
@@ -665,6 +679,7 @@ $mercury: #e5e5e5;
 
   .question-wrapper {
     display: inline-block;
+    padding-bottom: 30px;
     width: 80%;
 
     @include breakpoint(extra-small) {
@@ -711,7 +726,7 @@ $mercury: #e5e5e5;
   }
 }
 
-//TODO invite
+//invite
 .inivite {
   text-align: center;
   h3 {
@@ -1028,9 +1043,66 @@ $mercury: #e5e5e5;
         display: inline-block;
         &:first-child {
           width: 35%;
+          @media screen and (max-width: 570px) {
+            display: block;
+            width: 100%;
+          }
         }
         &:last-child {
           width: 65%;
+        }
+      }
+    }
+    &.with-hint {
+      position: relative;
+      input {
+        &.email, &.pass {
+          padding-right: 100px;
+
+          @include breakpoint(extra-small) {
+            padding-right: 0;
+          }
+        }
+      }
+      &.wrapper-phone {
+        input {
+          padding-right: 145px;
+        }
+        .hint {
+          color: #000;
+          text-decoration: none;
+          opacity: 0;
+          i {
+            margin-right: 5px;
+          }
+        }
+        &.checked {
+          .hint {
+            opacity: 1;
+          }
+        }
+      }
+
+      .hint {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        height: 50px;
+        color: $ruby;
+        text-decoration: underline;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 50px;
+        &:not(.pass) {
+          @include breakpoint(extra-small) {
+            position: inherit;
+            top: 0;
+            right: 0;
+            display: block;
+          }
+        }
+        &.pass {
+          top: 0;
         }
       }
     }

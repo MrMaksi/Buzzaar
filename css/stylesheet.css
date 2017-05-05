@@ -319,6 +319,19 @@
       .more .table > tbody > tr > td:nth-child(2) {
         width: 60px;
         text-align: right; }
+  .more .table > tbody i[data-toggle=popover] {
+    cursor: pointer; }
+
+.popover {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #2febd1; }
+
+.popover.top > .arrow:after {
+  border-top-color: #2febd1; }
+
+.popover.left > .arrow:after {
+  border-left-color: #2febd1; }
 
 .promo-wrapper .row {
   padding: 30px 0;
@@ -472,6 +485,7 @@
 
 .question .question-wrapper {
   display: inline-block;
+  padding-bottom: 30px;
   width: 80%; }
   @media (max-width: 767px) {
     .question .question-wrapper {
@@ -743,8 +757,47 @@
       display: inline-block; }
       .anketa .form-group .childWrapper .form-group:first-child {
         width: 35%; }
+        @media screen and (max-width: 570px) {
+          .anketa .form-group .childWrapper .form-group:first-child {
+            display: block;
+            width: 100%; } }
       .anketa .form-group .childWrapper .form-group:last-child {
         width: 65%; }
+  .anketa .form-group.with-hint {
+    position: relative; }
+    .anketa .form-group.with-hint input.email, .anketa .form-group.with-hint input.pass {
+      padding-right: 100px; }
+      @media (max-width: 767px) {
+        .anketa .form-group.with-hint input.email, .anketa .form-group.with-hint input.pass {
+          padding-right: 0; } }
+    .anketa .form-group.with-hint.wrapper-phone input {
+      padding-right: 145px; }
+    .anketa .form-group.with-hint.wrapper-phone .hint {
+      color: #000;
+      text-decoration: none;
+      opacity: 0; }
+      .anketa .form-group.with-hint.wrapper-phone .hint i {
+        margin-right: 5px; }
+    .anketa .form-group.with-hint.wrapper-phone.checked .hint {
+      opacity: 1; }
+    .anketa .form-group.with-hint .hint {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      height: 50px;
+      color: #ec087a;
+      text-decoration: underline;
+      font-weight: 100;
+      font-size: 14px;
+      line-height: 50px; }
+      @media (max-width: 767px) {
+        .anketa .form-group.with-hint .hint:not(.pass) {
+          position: inherit;
+          top: 0;
+          right: 0;
+          display: block; } }
+      .anketa .form-group.with-hint .hint.pass {
+        top: 0; }
 
 .anketa .form-control::-webkit-input-placeholder {
   -webkit-transition: .3s;

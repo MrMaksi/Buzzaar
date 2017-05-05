@@ -946,8 +946,9 @@ h1 + .nav-header, h2 + .nav-header { margin-top: -7px; }
     }
     .border-section { padding-bottom: 68px; margin-bottom: 41px; }
     .col-md-4 {
-        width: 33.33333333%;
-        float: left;
+        /*TODO Please read the documentation. This is bad solution!!!*/
+        /*width: 33.33333333%;*/
+        /*float: left;*/
     }
     .box-bnr {
         padding-bottom: 34px;
@@ -1087,8 +1088,9 @@ h1 + .nav-header, h2 + .nav-header { margin-top: -7px; }
     }
     .border-section { padding-bottom: 68px; margin-bottom: 54px; }
     .col-md-4 {
-        width: 100%;
-        float: none;
+        /*TODO Please read the documentation. This is bad solution!!!*/
+        /*width: 100%;*/
+        /*float: none;*/
     }
     .box-bnr {
         display: none;

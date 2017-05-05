@@ -17,8 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
 
     <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
     <script src="js/hammer.min.js"></script>
     <script src="js/sidebar.js"></script>
@@ -214,6 +214,9 @@
                 <img class="card" src="./img/yourCard.png" alt="Your Card">
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
+                <button type="button" class="btn btn-default" data-toggle="tooltip" title="Tooltip on left">Tooltip on
+                    left
+                </button>
                 <h3>Это твоя карта Buzzaar</h3>
                 <p class="count">НА НЕЙ СЕЙЧАС <span>2323</span> <i class="icon bonus pink">&nbsp;</i></p>
                 <div class="info">
@@ -404,17 +407,25 @@
                     <tr>
                         <td>Регистрация на сайте и подтверждение email</td>
                         <td>100</td>
-                        <td><i class="icon more ok">&nbsp;</i></td>
+                        <td>
+                            <i class="icon more ok"
+                               data-toggle="popover"
+                               data-content="В разделе 'Мои опросы' вы найдете тематические опросы, и за каждый заполненный опрос мы начисляем вам баллы. Делитесь своим мнением и получайте баллы!">
+                                &nbsp;</i>
+                        </td>
                     </tr>
                     <tr>
                         <td>Привязка соцсетей к аккаунту</td>
                         <td>20</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
+                        <td><i class=" icon more info">&nbsp;</i></td>
                     </tr>
                     <tr>
                         <td>Заполнение отчета по акции</td>
                         <td>500</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
+                        <td> <i class="icon more info"
+                                data-toggle="popover"
+                                data-content="В разделе 'Мои опросы' вы найдете тематические опросы, и за каждый заполненный опрос мы начисляем вам баллы. Делитесь своим мнением и получайте баллы!">
+                            &nbsp;</i></td>
                     </tr>
                     <tr>
                         <td>Шеринг акции</td>
@@ -424,7 +435,10 @@
                     <tr>
                         <td>Заявка на акцию</td>
                         <td>10</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
+                        <td> <i class="icon more info"
+                                data-toggle="popover"
+                                data-content="В разделе 'Мои опросы' вы найдете тематические опросы, и за каждый заполненный опрос мы начисляем вам баллы. Делитесь своим мнением и получайте баллы!">
+                            &nbsp;</i></td>
                     </tr>
                     </tbody>
                 </table>
@@ -442,7 +456,10 @@
                     <tr>
                         <td>Заполнение опроса в профайле</td>
                         <td>20</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
+                        <td> <i class="icon more info"
+                                data-toggle="popover"
+                                data-content="В разделе 'Мои опросы' вы найдете тематические опросы, и за каждый заполненный опрос мы начисляем вам баллы. Делитесь своим мнением и получайте баллы!">
+                            &nbsp;</i></td>
                     </tr>
                     <tr>
                         <td>Приглашение друга на сайт Buzzaar</td>
@@ -457,12 +474,18 @@
                     <tr>
                         <td>Обучение от Buzzaar</td>
                         <td>50</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
+                        <td> <i class="icon more ok"
+                                data-toggle="popover"
+                                data-content="В разделе 'Мои опросы' вы найдете тематические опросы, и за каждый заполненный опрос мы начисляем вам баллы. Делитесь своим мнением и получайте баллы!">
+                            &nbsp;</i></td>
                     </tr>
                     <tr>
                         <td>Buzzaars apologies to you</td>
                         <td>200</td>
-                        <td><i class="icon more ok">&nbsp;</i></td>
+                        <td> <i class="icon more ok"
+                                data-toggle="popover"
+                                data-content="В разделе 'Мои опросы' вы найдете тематические опросы, и за каждый заполненный опрос мы начисляем вам баллы. Делитесь своим мнением и получайте баллы!">
+                            &nbsp;</i></td>
                     </tr>
                     </tbody>
                 </table>
