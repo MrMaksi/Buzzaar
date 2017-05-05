@@ -1,5 +1,5 @@
 //global variables
-$roboto: 'font-family: ' Roboto ', Arial, Verdana, sans-serif';
+$roboto: 'Roboto', Arial, Verdana, sans-serif;
 $robotoCodensed: 'Roboto Condensed', Arial, Verdana, sans-serif;
 $ruby: #ec087a;
 $turquoise: #2febd1;
@@ -7,81 +7,214 @@ $white: #f4f4f4;
 $whiteSmoke: #f8f8f8;
 $nightRider: #333;
 $mercury: #e5e5e5;
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == extra-small {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
 .icon {
   display: inline-block;
-  vertical-align: middle;
+  background-image: url(../img/icon-sprite.png);
   background-repeat: no-repeat;
+  vertical-align: middle;
   &.bonus {
-    width: 17px;
-    height: 25px;
     &.white {
-      background-image: url(../img/icon-bonus_white.png);
+      width: 17px;
+      height: 25px;
+      background-position: -48px -10px;
     }
     &.pink {
-      background-image: url(../img/icon-bonus_pink.png);
+      width: 18px;
+      height: 27px;
+      background-position: -10px -10px;
+    }
+  }
+  &.more {
+    width: 15px;
+    height: 15px;
+    &.ok {
+      background-position: -87px -45px;
+    }
+    &.info {
+      background-position: -85px -10px;
+    }
+  }
+  &.promo {
+    &.geo {
+      width: 19px;
+      height: 24px;
+      background-position: -48px -55px;
+    }
+    &.time {
+      width: 18px;
+      height: 22px;
+      background-position: -181px -10px;
     }
   }
 }
 
-.menu-wrapper {
-  ul {
-    padding: 0;
-    text-align: center;
-    margin: 15px 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-    &:first-child {
-      margin-left: 0;
+.radio.custom, .radio-inline.custom {
+  input[type='radio'] {
+    margin-left: -30px;
+    outline: none;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: 1px solid $ruby;
+      border-radius: 50px;
     }
-    &:last-child {
-      margin-right: 0;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50px;
+      background-color: transparent;
+      transition: background-color .27s ease;
     }
-    &:not(.active) {
-      border-bottom: 1px solid $ruby;
-      a {
-        color: $ruby;
+    &:checked {
+      &:after {
+        background-color: #252525;
       }
-    }
-    &.active {
-      position: relative;
-      &:before {
-        background: url("../img/bg-head.svg") 0 0 no-repeat;
-        content: '';
-        display: block;
-        position: absolute;
-        width: 100%;
-        background-size: cover;
-        z-index: -1;
-        height: 100%;
+      &.not-valid {
+        + span:before {
+          content: 'НЕ ВЕРНО!';
+          position: absolute;
+          top: 2px;
+          left: -100px;
+          color: $ruby;
+          font-weight: 700;
+          font-size: 17px;
+        }
       }
-
-    }
-    a {
-      font-weight: 700;
     }
   }
 }
 
-//TODO cardPage
+.checkbox.custom, .checkbox-inline.custom {
+  input[type='checkbox'] {
+    margin-left: -30px;
+    outline: none;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: 1px solid $ruby;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 10px;
+      height: 7px;
+      border: 2px solid #fff;
+      border-top-style: none;
+      border-right-style: none;
+      transform: rotate(-45deg);
+    }
+    &:checked {
+      &:after {
+        border-color: #252525;
+      }
+    }
+  }
+}
+
+.container-custom {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 970px;
+}
+
+.btn-pink-bordered {
+  border: 1px solid $ruby;
+  background-color: #fff;
+  color: $ruby;
+}
+
 .top-profile {
+  //TODO margin-top: -45px - please fix main menu height!!!
+  margin-top: -45px;
+  padding: 32px 0 53px;
   background-color: $whiteSmoke;
   text-align: center;
+  font-family: $robotoCodensed;
+
+  @include breakpoint(extra-small) {
+    padding: 30px 0;
+  }
+
   img {
+    padding-right: 15px;
     vertical-align: middle;
+
+    @include breakpoint(extra-small) {
+      display: block;
+      margin: auto;
+      padding-right: 0;
+    }
   }
   &_wrapper {
+    position: relative;
     display: inline-block;
+    padding-top: 32px;
     vertical-align: middle;
     text-align: left;
+
+    @include breakpoint(extra-small) {
+      text-align: center;
+    }
   }
   .status {
     p {
       display: inline-block;
-      font-size: 17px;
-      text-transform: uppercase;
       margin: 0;
+      text-transform: uppercase;
+      font-size: 17px;
+      line-height: 17px;
+
       span {
         font-weight: 700;
       }
@@ -94,31 +227,142 @@ $mercury: #e5e5e5;
     h2 {
       margin: 0;
       vertical-align: middle;
+      line-height: 56px;
     }
     .count {
-      background-color: $ruby;
-      vertical-align: middle;
-      font-size: 26px;
-      color: #fff;
+      margin-bottom: 0;
+      margin-left: 6px;
+      padding: 3px 13px;
       border-radius: 50px;
-      padding: 13px 18px;
+      background-color: $ruby;
+      color: #fff;
+      vertical-align: middle;
+      font-weight: 700;
+      font-size: 26px;
+
+      @include breakpoint(extra-small) {
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        left: 0;
+        margin: auto;
+        width: 120px;
+        border: 3px solid #fff;
+      }
+      i.icon {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.top-menu {
+  @include breakpoint(extra-small) {
+    padding-top: 30px;
+    background-color: #3fead1;
+  }
+  &_wrapper {
+    ul {
+      margin: 9px 0;
+      padding: 0;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      line-height: 16px;
+
+      @include breakpoint(extra-small) {
+        display: block;
+        margin: 0 0 20px;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:not(.active) {
+        border-bottom: 2px solid $ruby;
+
+        @include breakpoint(extra-small) {
+          border-bottom-color: transparent;
+        }
+        a {
+          color: $ruby;
+
+          @include breakpoint(extra-small) {
+            color: #000;
+          }
+        }
+      }
+      &.active {
+        a {
+          background-image: url(../img/icon-menu.png);
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          @include breakpoint(extra-small) {
+            background-image: url(../img/icon-menu-mobile.png);
+          }
+        }
+      }
+      a {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        font-family: $robotoCodensed;
+
+        @include breakpoint(extra-small) {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
 
 .yourCard {
+  margin-top: 30px;
+  .card {
+    margin-top: 30px;
+
+    @include breakpoint(extra-small) {
+      margin-top: 0;
+    }
+  }
+  h3 {
+    margin-top: 27px;
+    margin-bottom: 0;
+    font-family: $robotoCodensed;
+    line-height: 26px;
+  }
   .count {
+    padding-top: 7px;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 17px;
+    font-family: $robotoCodensed;
+    line-height: 17px;
     span {
       color: $ruby;
       font-size: 29px;
     }
+    i.icon {
+      margin-top: -13px;
+    }
   }
-  a {
-    color: $ruby;
-    text-decoration: underline;
+  .info {
+    padding-top: 3px;
+    font-weight: 100;
+    p {
+      margin-bottom: 12px;
+      line-height: 29px;
+    }
+    a {
+      color: $ruby;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -126,14 +370,764 @@ $mercury: #e5e5e5;
   .table {
     thead {
       background-color: $mercury;
+      text-transform: uppercase;
+      font-size: 11px;
+      th:nth-child(1) {
+        padding-left: 25px;
+      }
     }
     > tbody {
+      font-size: 13px;
       > tr {
         background-color: $whiteSmoke;
-        >td{
+
+        > td {
           border-top: 2px solid #fff;
+          &:nth-child(1) {
+            padding-left: 25px;
+          }
+          &:nth-child(2) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .nav {
+    margin-top: 15px;
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      min-width: 46px;
+      height: 46px;
+      background-color: $turquoise;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 17px;
+
+      @include breakpoint(extra-small) {
+        margin: 0;
+        min-width: 40px;
+        height: 40px;
+        font-size: 14px;
+      }
+      a {
+        display: block;
+        padding: 10px;
+        height: 100%;
+      }
+      &.active {
+        opacity: .5;
+      }
+      &:first-child {
+        margin-left: 0;
+        i {
+          padding-right: 15px;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+        i {
+          padding-left: 15px;
         }
       }
     }
   }
 }
+
+.more {
+  h3 {
+    margin: 63px 0 3px;
+  }
+  .table {
+    thead {
+      background-color: $mercury;
+      font-size: 11px;
+      th {
+        &:nth-child(1) {
+          width: 69%;
+        }
+        &:nth-child(2) {
+          width: 21%;
+        }
+      }
+    }
+    > tbody {
+      font-size: 13px;
+      > tr {
+        background-color: $whiteSmoke;
+        > td {
+          border-top: 2px solid #fff;
+          &:nth-child(2) {
+            width: 60px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+// promo block
+.promo-wrapper {
+  .row {
+    padding: 30px 0;
+    border-bottom: 1px solid $mercury;
+  }
+  .img-wrapper {
+    display: inline-block;
+    margin-right: 50px;
+    max-width: 150px;
+    vertical-align: middle;
+    text-align: center;
+
+    @include breakpoint(small) {
+      margin-right: 0;
+      padding-right: 20px;
+      max-width: 120px;
+      width: 30%;
+    }
+    @include breakpoint(extra-small) {
+      display: block;
+      margin: auto;
+    }
+    img {
+      border: 8px solid $white;
+      border-radius: 50%;
+    }
+  }
+  .info {
+    display: inline-block;
+    vertical-align: middle;
+
+    @include breakpoint(small) {
+      width: 70%;
+    }
+    @include breakpoint(extra-small) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 26px;
+      font-family: $robotoCodensed;
+      line-height: 37px;
+    }
+    p {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 26px;
+      i {
+        margin-right: 11px;
+      }
+    }
+  }
+  .btn-wrapper {
+    padding-top: 28px;
+
+    @include breakpoint(extra-small) {
+      text-align: center;
+    }
+    .btn {
+      display: block;
+      width: 268px;
+
+      @include breakpoint(small) {
+        width: 220px;
+      }
+      @include breakpoint(extra-small) {
+        display: block;
+        margin: auto;
+      }
+    }
+    span {
+      display: block;
+      margin: 11px 0;
+      font-weight: 100;
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+}
+
+// Education
+.question {
+  .nav-tabs {
+    margin: 50px 0 60px;
+    border-bottom: none;
+    text-align: center;
+    li {
+      position: relative;
+      display: inline-block;
+      float: none;
+      vertical-align: middle;
+      &:not(:last-child) {
+        padding-right: 36px;
+
+        @include breakpoint(small) {
+          padding-right: 18px;
+        }
+        @include breakpoint(extra-small) {
+          padding-right: 9px;
+        }
+        &:before {
+          content: '. . .';
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          color: $turquoise;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 27px;
+
+          @include breakpoint(small) {
+            content: '.';
+            right: 4px;
+          }
+          @include breakpoint(extra-small) {
+            content: '.';
+            line-height: 7px;
+          }
+        }
+      }
+      &:not(.active) {
+        @include breakpoint(extra-small) {
+          a {
+            width: 18px;
+            height: 18px;
+            font-size: 0;
+          }
+        }
+      }
+      &:last-child {
+        &.active {
+          @include breakpoint(extra-small) {
+            a {
+              width: 18px;
+              height: 18px;
+              font-size: 0;
+            }
+          }
+        }
+      }
+      a {
+        margin-right: 0;
+        padding: 6px 0;
+        width: 40px;
+        height: 40px;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        background-color: $turquoise;
+        font-weight: 700;
+        font-size: 17px;
+        font-family: $robotoCodensed;
+      }
+      &.active {
+        &:before {
+          @include breakpoint(extra-small) {
+            line-height: 27px;
+          }
+        }
+        a {
+          border: 2px solid $turquoise;
+          background-color: $turquoise;
+          color: #222;
+        }
+
+        & ~ li a {
+          border: 2px solid $turquoise;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .img-wrapper {
+    display: inline-block;
+    width: 19%;
+    vertical-align: top;
+
+    @include breakpoint(extra-small) {
+      display: block;
+      width: 100%;;
+    }
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .question-wrapper {
+    display: inline-block;
+    width: 80%;
+
+    @include breakpoint(extra-small) {
+      display: block;
+      width: 100%;
+    }
+    h3 {
+      margin-top: 6px;
+      margin-bottom: 9px;
+    }
+    h6 {
+      margin-bottom: 0;
+      color: $ruby;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 34px;
+    }
+    h5 {
+      margin: 5px 0 30px;
+      text-transform: none;
+      font-weight: 100;
+      font-size: 26px;
+      font-family: $roboto;
+      line-height: 23px;
+    }
+    p {
+      font-weight: 100;
+      line-height: 24px;
+    }
+    button {
+      margin-top: 20px;
+    }
+    .answer {
+      margin-top: 40px;
+      .radio.custom {
+        margin-bottom: 17px;
+        label {
+          padding-left: 32px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+//TODO invite
+.inivite {
+  text-align: center;
+  h3 {
+    margin-top: 46px;
+    line-height: 33px;
+  }
+  .share {
+    margin-top: 11px;
+    li {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 33px;
+      a {
+        background: $ruby;
+
+        &:hover {
+          background: $turquoise;
+        }
+      }
+    }
+  }
+  .findFrend {
+    padding-top: 26px;
+    padding-bottom: 60px;
+    background-color: $whiteSmoke;
+    .searchForm {
+      margin: auto;
+      width: 600px;
+      text-align: left;
+
+      @include breakpoint(extra-small) {
+        width: 90%;
+      }
+
+      span {
+        font-weight: 100;
+        font-size: 17px;
+        line-height: 23px;
+      }
+
+      .search-box__wrapper {
+        position: relative;
+      }
+      .search-box {
+        padding-right: 40px;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #ccc;
+        transition: all .15s ease-in-out;
+      }
+      .search-label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 15px;
+        padding-right: 5px;
+        width: 40px;
+        height: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all .15s ease-in-out;
+      }
+    }
+
+    .list {
+      overflow-y: auto;
+      margin-top: 55px;
+      margin-right: 25px;
+      padding-left: 100px;
+      height: 395px;
+
+      @include breakpoint(small) {
+        margin-right: 0;
+        padding-left: 0;
+      }
+      @include breakpoint(extra-small) {
+        margin-right: 0;
+        padding-left: 0;
+        height: auto;
+      }
+
+      .item {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 25px;
+        img {
+          max-width: 80px;
+          max-height: 80px;
+          width: 100%;
+          height: 100%;
+          border: 2px solid transparent;
+          border-radius: 50%;
+          transition: border .27s ease;
+          &:hover {
+            border-color: $turquoise;
+          }
+        }
+        p {
+          margin-bottom: 0;
+          font-weight: 100;
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .moreFriends {
+      position: relative;
+      margin: auto;
+      color: $ruby;
+      font-weight: 700;
+      font-size: 13px;
+      span {
+        margin-right: 5px;
+        letter-spacing: -3px;
+        font-size: 50px;
+        line-height: 0;
+      }
+    }
+  }
+  .copy {
+    margin: 57px 0 0;
+    font-weight: 100;
+    font-size: 17px;
+    line-height: 27px;
+  }
+  h4 {
+    color: $ruby;
+    font-weight: 700;
+    font-size: 26px;
+    font-family: $robotoCodensed;
+    line-height: 32px;
+
+    @include breakpoint(extra-small) {
+      font-size: 22px;
+    }
+  }
+  .point {
+    margin-top: 27px;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+//Anketa
+.anketa {
+  p {
+    font-weight: 100;
+    font-size: 17px;
+  }
+  h3 {
+    text-align: center;
+    line-height: 32px;
+  }
+  .radio-inline, .checkbox-inline, .radio label, .checkbox label {
+    padding-left: 30px;
+    font-weight: 700;
+  }
+  .no-side-border {
+    border-width: 1px 0;
+  }
+  .form-group {
+    margin: 0 auto 28px;
+    width: 560px;
+
+    @include breakpoint(extra-small) {
+      width: 100%;
+    }
+    &.wrapper {
+      font-size: 0;
+      > div {
+        display: inline-block;
+      }
+      label {
+        display: block;
+      }
+      &-date {
+        > div {
+          width: 25%;
+          &:nth-child(3) {
+            width: 50%;
+          }
+        }
+      }
+
+      &-city {
+        > div {
+          width: 50%;
+          &:first-child {
+            padding-right: 10px;
+          }
+          &:last-child {
+            padding-left: 10px;
+          }
+        }
+      }
+
+      &-adress {
+        > div {
+          &:first-child {
+            width: 64%;
+          }
+          &:not(:first-child) {
+            width: 18%;
+          }
+        }
+      }
+
+      &-phone {
+        > div {
+          width: 81%;
+          &:nth-child(2) {
+            width: 19%;
+          }
+        }
+      }
+
+      &-social {
+        .social {
+          display: block;
+          &:last-child {
+            margin-top: 26px;
+          }
+          .inner {
+            display: inline-block;
+            margin-right: 20px;
+            width: calc(35% - 20px);
+            vertical-align: middle;
+            &.fb {
+              background-color: #4767af;
+              i {
+                background-position: -53px 0;
+              }
+            }
+            &.vk {
+              background-color: #5581b7;
+              i {
+                background-position: -33px 0;
+              }
+            }
+            i {
+              display: block;
+              margin: 15px auto 0;
+              width: 20px;
+              height: 20px;
+              background-image: url(../img/social.png);
+              background-repeat: no-repeat;
+            }
+          }
+          input {
+            display: inline-block;
+            width: 65%;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &-frends {
+        .inner {
+          width: calc(50% - 10px);
+          border: 1px solid #ccc;
+
+          @include breakpoint(extra-small) {
+            margin: 0;
+            width: 100%;
+          }
+          &:nth-child(2) {
+            margin-right: 10px;
+
+            @include breakpoint(extra-small) {
+              margin-right: 0;
+            }
+          }
+          &:nth-child(3) {
+            margin-left: 10px;
+
+            @include breakpoint(extra-small) {
+              margin-top: 15px;
+              margin-left: 0;
+            }
+          }
+          .icon {
+            width: 50px;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            &.fb {
+              background-image: url(../img/icon-social-fb.png);
+            }
+            &.vk {
+              background-image: url(../img/icon-social-vk.png);
+            }
+          }
+          .counter {
+            vertical-align: middle;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+
+    .childWrapper {
+      padding: 20px;
+      background-color: $whiteSmoke;
+      font-size: 0;
+      .control-label {
+        display: block;
+      }
+      .form-group {
+        display: inline-block;
+        &:first-child {
+          width: 35%;
+        }
+        &:last-child {
+          width: 65%;
+        }
+      }
+    }
+  }
+
+  .form-control {
+    @include placeholder {
+      transition: .3s;
+    }
+    &:focus {
+      @include placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  label {
+    font-weight: 100;
+    font-size: 17px;
+  }
+  input, select, .inner {
+    height: 50px;
+    border-radius: 0;
+    font-weight: 700;
+  }
+  button[type=submit] {
+    display: block;
+    margin: auto;
+  }
+  .bottomInfo {
+    a {
+      color: $ruby;
+    }
+    span {
+      display: block;
+      font-size: 12px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

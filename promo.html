@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Buzzaar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+
     <!--TODO Please concat all stylesheet-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="css/materialize.css"/>
@@ -184,13 +185,13 @@
     <div class="container">
         <div class="top-menu_wrapper">
             <ul>
-                <li class="active">
+                <li >
                     <a href="card.html">Моя карта</a>
                 </li>
                 <li>
                     <a href="anketa.html">Моя анкета</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="promo.html">Мои акции</a>
                 </li>
                 <li>
@@ -208,267 +209,110 @@
 </section>
 
 <div class="container-custom">
-    <section class="yourCard">
+    <div class="promo-wrapper">
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center">
-                <img class="card" src="./img/yourCard.png" alt="Your Card">
-            </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <h3>Это твоя карта Buzzaar</h3>
-                <p class="count">НА НЕЙ СЕЙЧАС <span>2323</span> <i class="icon bonus pink">&nbsp;</i></p>
+                <div class="img-wrapper">
+                    <img src="./img/promo-1.jpg" alt="">
+                </div>
                 <div class="info">
-                    <p>Карта создана для того, чтобы накапливать на нее баллы-баззарчики: чем больше баллов – тем выше
-                        вероятность подтверждения вашей анкеты для участия в акции.</p>
-                    <p>Вы можете накапливать баллы, совершая различные действия на сайте, участвуя в акциях, приглашая
-                        друзей. Посмотрите, какие <a href="#">действия</a> вы можете предпринять для увеличения
-                        количества баллов на карте уже сейчас, а также посмотрите, какой у вас сейчас <a
-                                href="#">статус</a> и куда вам двигаться дальше.</p>
+                    <h3>Braun Silk Epil</h3>
+                    <p><i class="icon promo geo"></i>Москва, Санкт-Петерберг,<br/> Хабаровск</p>
+                    <p><i class="icon promo time"></i>September 2016-October 2016</p>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 btn-wrapper">
+                <button class="btn waves-effect waves-light btn-pink">Участвовать<i
+                        class="glyphicon glyphicon-chevron-right"></i></button>
+                <span>Мы рекомендуем Вам принять участие в этой акции</span>
+            </div>
         </div>
-    </section>
-    <section class="history">
-        <h3>История начисления</h3>
         <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Дата</th>
-                        <th>Кол-во баллов</th>
-                        <th>Событие</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>15.11.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>14.11.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>08.11.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>03.11.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>27.10.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>24.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>21.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>20.09.2016</td>
-                        <td>10</td>
-                        <td>Шеринг акции Super Braun Series 3</td>
-                    </tr>
-                    <tr>
-                        <td>19.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>18.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>18.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <div class="img-wrapper">
+                    <img src="./img/promo-2.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Durex Shaft Erection CAMPAIGN</h3>
+                    <p><i class="icon promo geo"></i>Москва, Санкт-Петерберг, Хабаровск</p>
+                    <p><i class="icon promo time"></i>September 2016-October 2016</p>
+                </div>
             </div>
-            <div class="visible-md visible-lg col-md-6">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Дата</th>
-                        <th>Кол-во баллов</th>
-                        <th>Событие</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>18.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>18.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>16.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>15.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>14.09.2016</td>
-                        <td>10</td>
-                        <td>Шеринг акции Braun Series 3</td>
-                    </tr>
-                    <tr>
-                        <td>14.09.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>29.08.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>20.08.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>28.07.2016</td>
-                        <td>1</td>
-                        <td>Вход на сайт</td>
-                    </tr>
-                    <tr>
-                        <td>28.07.2016</td>
-                        <td>100</td>
-                        <td>Регистрация на сайте</td>
-                    </tr>
-                    <tr>
-                        <td>28.07.2016</td>
-                        <td>1</td>
-                        <td>и подтверждение email</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="col-xs-12 col-sm-4 col-md-4 btn-wrapper">
+                <button class="btn waves-effect waves-light btn-blue">Заполнить отчет<i
+                        class="glyphicon glyphicon-chevron-right"></i></button>
+                <span>Ура! Вы получили Buzz-Kit. <br/>Теперь пора заполнить отчет.</span>
             </div>
         </div>
-        <div class="nav">
-            <ul>
-                <li class="active">
-                    <a href="#"><i class="glyphicon glyphicon-chevron-left"></i>PREV</a>
-                </li>
-                <li class="active">
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">next<i class="glyphicon glyphicon-chevron-right"></i></a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="more">
-        <h3>Хотите больше баллов? Действуйте!</h3>
-        <p>Ниже вы найдете список действий, за которые вы можете получить еще больше баллов на ваш счет.</p>
         <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>ДЕЙСТВИЕ</th>
-                        <th>Кол-во баллов</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Регистрация на сайте и подтверждение email</td>
-                        <td>100</td>
-                        <td><i class="icon more ok">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Привязка соцсетей к аккаунту</td>
-                        <td>20</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Заполнение отчета по акции</td>
-                        <td>500</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Шеринг акции</td>
-                        <td>10</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Заявка на акцию</td>
-                        <td>10</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <div class="img-wrapper">
+                    <img src="./img/promo-3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Braun Silk Epil</h3>
+                    <p><i class="icon promo geo"></i>Москва, Санкт-Петерберг,<br/> Хабаровск</p>
+                    <p><i class="icon promo time"></i>September 2016-October 2016</p>
+                </div>
             </div>
-            <div class="visible-md visible-lg col-md-6">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>ДЕЙСТВИЕ</th>
-                        <th>Кол-во баллов</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Заполнение опроса в профайле</td>
-                        <td>20</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Приглашение друга на сайт Buzzaar</td>
-                        <td>20</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Вход на сайт</td>
-                        <td>1</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Обучение от Buzzaar</td>
-                        <td>50</td>
-                        <td><i class="icon more info">&nbsp;</i></td>
-                    </tr>
-                    <tr>
-                        <td>Buzzaars apologies to you</td>
-                        <td>200</td>
-                        <td><i class="icon more ok">&nbsp;</i></td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="col-xs-12 col-sm-4 col-md-4 btn-wrapper">
+                <span>Статус заявки на акцию</span>
+                <button class="btn waves-effect waves-light btn-pink-bordered">Участвовать<i
+                        class="glyphicon glyphicon-chevron-right"></i></button>
             </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <div class="img-wrapper">
+                    <img src="./img/promo-1.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Braun Silk Epil</h3>
+                    <p><i class="icon promo geo"></i>Москва, Санкт-Петерберг,<br/> Хабаровск</p>
+                    <p><i class="icon promo time"></i>September 2016-October 2016</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 btn-wrapper">
+                <button class="btn waves-effect waves-light btn-pink">Участвовать<i
+                        class="glyphicon glyphicon-chevron-right"></i></button>
+                <span>Мы рекомендуем Вам принять участие в этой акции</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <div class="img-wrapper">
+                    <img src="./img/promo-2.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Braun Silk Epil</h3>
+                    <p><i class="icon promo geo"></i>Москва, Санкт-Петерберг,<br/> Хабаровск</p>
+                    <p><i class="icon promo time"></i>September 2016-October 2016</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 btn-wrapper">
+                <button class="btn waves-effect waves-light btn-pink">Участвовать<i
+                        class="glyphicon glyphicon-chevron-right"></i></button>
+                <span>Мы рекомендуем Вам принять участие в этой акции</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <div class="img-wrapper">
+                    <img src="./img/promo-3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Braun Silk Epil</h3>
+                    <p><i class="icon promo geo"></i>Москва, Санкт-Петерберг,<br/> Хабаровск</p>
+                    <p><i class="icon promo time"></i>September 2016-October 2016</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 btn-wrapper">
+                <button class="btn waves-effect waves-light btn-pink">Участвовать<i
+                        class="glyphicon glyphicon-chevron-right"></i></button>
+                <span>Мы рекомендуем Вам принять участие в этой акции</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript" src="js/inc-swiper.js"></script>

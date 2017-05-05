@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buzzaar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--TODO Please concat all stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popup.css"/>
+    <link rel="stylesheet" type="text/css" href="css/promo-box.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slide.css"/>
+    <link rel="stylesheet" type="text/css" href="css/action-list.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container-fluid">
+    <header class="main-head">
+        <div class="container clearfix">
+            <div class="logo-box">
+                <a href="#">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+            <div class="right-head clearfix">
+                <div class="fl-right nav-link change-status">
+                    <a href="#" id="dClient" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="active-bg">I’m a client</span><span
+                            class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dClient">
+                        <li><a href="#">I’M AN AGENT</a></li>
+                    </ul>
+                </div>
+                <div class="fl-right nav-link change-country">
+                    <a href="#" id="countryDrop" data-target="#" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">
+                        <span class="ico-lang ico-lang-small ru"></span>RU<span
+                            class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-country" aria-labelledby="countryDrop">
+                        <div class="container">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang ru"></span>РОССИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang ua"></span>УКРАИНА</a></li>
+                                <li><a href="#"><span class="ico-lang by"></span>БЕЛАРУСЬ</a></li>
+                                <li><a href="#"><span class="ico-lang lt"></span>ЛИТВА</a></li>
+                                <li><a href="#"><span class="ico-lang lv"></span>ЛАТВИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang et"></span>ЭСТОНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang kz"></span>КАЗАХСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang am"></span>АРМЕНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang az"></span>АЗЕРБАЙДЖАН</a></li>
+                                <li><a href="#"><span class="ico-lang ge"></span>ГРУЗИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang uz"></span>УЗБЕКИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang tj"></span>ТАДЖИКИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang tm"></span>ТУРКМЕНИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang kg"></span>КИРГИЗИЯ</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang ro"></span>РУМЫНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang md"></span>МОЛДОВА</a></li>
+                                <li><a href="#"><span class="ico-lang bg"></span>БОЛГАРИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang rs"></span>СЕРБИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang hr"></span>ХОРВАТИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang si"></span>СЛОВЕНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang ba"></span>БОСНИЯ И ГЕРЦЕГОВИНА</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang pl"></span>ПОЛЬША</a></li>
+                                <li><a href="#"><span class="ico-lang tr"></span>ТУРЦИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang cz"></span>ЧЕХИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang sk"></span>СЛОВАКИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang hu"></span>ВЕНГРИЯ</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang nl"></span>НИДЕРЛАНДЫ</a></li>
+                                <li><a href="#"><span class="ico-lang mt"></span>МАЛЬТА</a></li>
+                                <li><a href="#"><span class="ico-lang be"></span>БЕЛЬГИЯ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl-right nav-link show-logout">
+                    <a href="#" data-toggle="modal" data-target="#loginModal">
+                        <span class="ico ico-login"></span><span class="link-text">Login</span>
+                    </a>
+                </div>
+                <nav class="fl-right ">
+                    <ul class="main-menu clearfix">
+                        <li><a href="#">ABOUT US</a></li>
+                        <li class="active"><a href="#">PROMOS</a></li>
+                        <li><a href="#">REVIEWS</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div data-sidebar="true" class="sidebar-trigger sidebar-right">
+                 <span class="mobile-menu-ico sidebar-toggle show-mb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <div class="sidebar-wrapper sidebar-default ">
+                    <div class="sidebar-scroller">
+                        <div class="sidebar-head">
+                            <a href="#" data-toggle="modal" data-target="#loginModal">
+                                <span class="ico ico-login"></span><span class="link-text">Login</span>
+                            </a>
+                            <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li><a href="#">ABOUT US</a></li>
+                            <li class="active"><a href="#">PROMOS</a></li>
+                            <li><a href="#">REVIEWS</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <div class="sidebar-footer">
+                            <div class="nav-link change-lang">
+                                <a href="#" data-toggle="modal" data-target="#countryModal">
+                                    <span></span>RUSSIA<span class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                            <div class="nav-link change-country">
+                                <a href="#">
+                                    RU<span class="ico-lang ru"></span><span
+                                        class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                            <div class="nav-link change-status">
+                                <a href="#" id="dClient" data-target="#" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <span class="active-bg">I’m a client</span><span
+                                        class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<section class="top-profile text-center">
+    <div class="container">
+        <img src="./img/profile-img.png" alt="Profile">
+        <div class="top-profile_wrapper">
+            <div class="status">
+                <p>status: <span>Newbie</span></p>
+                <span>|</span>
+                <p>profile completed: <span>35%</span></p>
+            </div>
+            <div class="name">
+                <h2>IEVGEN VIETROV</h2>
+                <p class="count">2323 <i class="icon bonus white">&nbsp;</i></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="top-menu">
+    <div class="container">
+        <div class="top-menu_wrapper">
+            <ul>
+                <li >
+                    <a href="card.html">Моя карта</a>
+                </li>
+                <li>
+                    <a href="anketa.html">Моя анкета</a>
+                </li>
+                <li>
+                    <a href="promo.html">Мои акции</a>
+                </li>
+                <li class="active">
+                    <a href="education.html">Обучение</a>
+                </li>
+                <li>
+                    <a href="#">Помощь</a>
+                </li>
+                <li>
+                    <a href="ivite.html">Пригласить друга</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<div class="container-custom question">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#question_1" aria-controls="question_1" role="tab" data-toggle="tab">1</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_2" aria-controls="question_2" role="tab" data-toggle="tab">2</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_3" aria-controls="question_3" role="tab" data-toggle="tab">3</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_4" aria-controls="question_4" role="tab" data-toggle="tab">4</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_5" aria-controls="question_5" role="tab" data-toggle="tab">5</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_6" aria-controls="question_6" role="tab" data-toggle="tab">6</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_7" aria-controls="question_7" role="tab" data-toggle="tab">7</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_8" aria-controls="question_8" role="tab" data-toggle="tab">8</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_9" aria-controls="question_9" role="tab" data-toggle="tab">9</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_10" aria-controls="question_10" role="tab" data-toggle="tab">10</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_11" aria-controls="question_11" role="tab" data-toggle="tab">11</a>
+        </li>
+        <li role="presentation">
+            <a href="#question_12" aria-controls="question_12" role="tab" data-toggle="tab">12</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="question_1">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_2">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_3">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_4">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_5">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_6">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_7">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_8">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_9">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_10">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_11">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-1.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Что такое Buzzaar?</h3>
+                    <p>Агентство сарафанного маркетинга Buzzaar вдохновляет потребителей знакомиться с брендами и
+                        рекомендовать их друг другу. Компания дает возможность людям первыми попробовать новинки и
+                        получить
+                        эксклюзивные подарки от брендов, а в обмен потребители делятся своим мнением с окружающими. Со
+                        дня
+                        основания компании (2009 год) Buzzaar разослал тысячи посылок с продукцией, чтобы услышать сотни
+                        тысяч мнений своих агентов.</p>
+                    <div class="answer">
+                        <h6>Вопрос №1</h6>
+                        <h5>Что такое Buzzaar в понимании современного потребителя?</h5>
+
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-1" value="option1"
+                                       class="not-valid" checked>
+                                <span>Большой рынок, где можно купить все, что угодно – от колбасы и конфет до фильтра и примуса</span>
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-2" value="option2">
+                                Агентство сарафанного маркетинга, которое дарит потребителям не только знакомство с
+                                новинками, но и массу подарков и положительных эмоций
+                            </label>
+                        </div>
+                        <div class="radio custom">
+                            <label>
+                                <input type="radio" name="questionAnswer" id="question-1_Answer-3" value="option3">
+                                Особый вид устной жаргонной речи, за которым стоит внимательно следить, чтобы не
+                                нарваться
+                                на неприятности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-blue">ПРОВЕРИТЬ ОТВЕТ<i
+                            class="glyphicon glyphicon-chevron-right"></i></button>
+
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="question_12">
+            <div class="row">
+                <div class="img-wrapper">
+                    <img src="./img/education-2.png" alt="img">
+                </div>
+                <div class="question-wrapper">
+                    <h3>Обучение завершено!</h3>
+                    <p>Вы ответили на все вопросы и теперь знаете о Buzzaar практически все!
+                        А за Ваше старание способного ученика мы начисляем на Вашу карту Buzzaar <b>50 баллов</b>.
+                        <br>
+                        <b> Поздравляем, так держать!</b></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="js/inc-swiper.js"></script>
+
+
+<div class="box-bnr text-center">
+    <a href="#"><img src="img/img1.jpg"></a>
+</div>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="socials-box">
+            <ul class="socials clearfix">
+                <li class="vk"><a href="#"></a></li>
+                <li class="inst"><a href="#"></a></li>
+                <li class="fb"><a href="#"></a></li>
+                <li class="tw"><a href="#"></a></li>
+            </ul>
+        </div>
+        <span class="copy">© BUZZAAR HOLDING LIMITED, 2006–2016</span>
+        <span>Some materials may be intended for persons over 16 years.</span>
+        <span>The member of WOMMA.</span>
+        <div class="womma-logo">
+            <span>OUR PARTNER</span>
+            <a href="#"><img src="img/womma.png" width="148"></a>
+        </div>
+    </div>
+</footer>
+
+<div class="sidebar-overlay"></div>
+</body>
+</html>

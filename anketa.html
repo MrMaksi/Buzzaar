@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buzzaar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--TODO Please concat all stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popup.css"/>
+    <link rel="stylesheet" type="text/css" href="css/promo-box.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slide.css"/>
+    <link rel="stylesheet" type="text/css" href="css/action-list.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container-fluid">
+    <header class="main-head">
+        <div class="container clearfix">
+            <div class="logo-box">
+                <a href="#">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+            <div class="right-head clearfix">
+                <div class="fl-right nav-link change-status">
+                    <a href="#" id="dClient" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="active-bg">I’m a client</span><span
+                            class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dClient">
+                        <li><a href="#">I’M AN AGENT</a></li>
+                    </ul>
+                </div>
+                <div class="fl-right nav-link change-country">
+                    <a href="#" id="countryDrop" data-target="#" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">
+                        <span class="ico-lang ico-lang-small ru"></span>RU<span
+                            class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-country" aria-labelledby="countryDrop">
+                        <div class="container">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang ru"></span>РОССИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang ua"></span>УКРАИНА</a></li>
+                                <li><a href="#"><span class="ico-lang by"></span>БЕЛАРУСЬ</a></li>
+                                <li><a href="#"><span class="ico-lang lt"></span>ЛИТВА</a></li>
+                                <li><a href="#"><span class="ico-lang lv"></span>ЛАТВИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang et"></span>ЭСТОНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang kz"></span>КАЗАХСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang am"></span>АРМЕНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang az"></span>АЗЕРБАЙДЖАН</a></li>
+                                <li><a href="#"><span class="ico-lang ge"></span>ГРУЗИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang uz"></span>УЗБЕКИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang tj"></span>ТАДЖИКИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang tm"></span>ТУРКМЕНИСТАН</a></li>
+                                <li><a href="#"><span class="ico-lang kg"></span>КИРГИЗИЯ</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang ro"></span>РУМЫНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang md"></span>МОЛДОВА</a></li>
+                                <li><a href="#"><span class="ico-lang bg"></span>БОЛГАРИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang rs"></span>СЕРБИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang hr"></span>ХОРВАТИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang si"></span>СЛОВЕНИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang ba"></span>БОСНИЯ И ГЕРЦЕГОВИНА</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang pl"></span>ПОЛЬША</a></li>
+                                <li><a href="#"><span class="ico-lang tr"></span>ТУРЦИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang cz"></span>ЧЕХИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang sk"></span>СЛОВАКИЯ</a></li>
+                                <li><a href="#"><span class="ico-lang hu"></span>ВЕНГРИЯ</a></li>
+                            </ul>
+                            <ul class="clearfix country-list">
+                                <li><a href="#"><span class="ico-lang nl"></span>НИДЕРЛАНДЫ</a></li>
+                                <li><a href="#"><span class="ico-lang mt"></span>МАЛЬТА</a></li>
+                                <li><a href="#"><span class="ico-lang be"></span>БЕЛЬГИЯ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl-right nav-link show-logout">
+                    <a href="#" data-toggle="modal" data-target="#loginModal">
+                        <span class="ico ico-login"></span><span class="link-text">Login</span>
+                    </a>
+                </div>
+                <nav class="fl-right ">
+                    <ul class="main-menu clearfix">
+                        <li><a href="#">ABOUT US</a></li>
+                        <li class="active"><a href="#">PROMOS</a></li>
+                        <li><a href="#">REVIEWS</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div data-sidebar="true" class="sidebar-trigger sidebar-right">
+                 <span class="mobile-menu-ico sidebar-toggle show-mb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <div class="sidebar-wrapper sidebar-default ">
+                    <div class="sidebar-scroller">
+                        <div class="sidebar-head">
+                            <a href="#" data-toggle="modal" data-target="#loginModal">
+                                <span class="ico ico-login"></span><span class="link-text">Login</span>
+                            </a>
+                            <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li><a href="#">ABOUT US</a></li>
+                            <li class="active"><a href="#">PROMOS</a></li>
+                            <li><a href="#">REVIEWS</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <div class="sidebar-footer">
+                            <div class="nav-link change-lang">
+                                <a href="#" data-toggle="modal" data-target="#countryModal">
+                                    <span></span>RUSSIA<span class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                            <div class="nav-link change-country">
+                                <a href="#">
+                                    RU<span class="ico-lang ru"></span><span
+                                        class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                            <div class="nav-link change-status">
+                                <a href="#" id="dClient" data-target="#" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <span class="active-bg">I’m a client</span><span
+                                        class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<section class="top-profile text-center">
+    <div class="container">
+        <img src="./img/profile-img.png" alt="Profile">
+        <div class="top-profile_wrapper">
+            <div class="status">
+                <p>status: <span>Newbie</span></p>
+                <span>|</span>
+                <p>profile completed: <span>35%</span></p>
+            </div>
+            <div class="name">
+                <h2>IEVGEN VIETROV</h2>
+                <p class="count">2323 <i class="icon bonus white">&nbsp;</i></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="top-menu">
+    <div class="container">
+        <div class="top-menu_wrapper">
+            <ul>
+                <li>
+                    <a href="card.html">Моя карта</a>
+                </li>
+                <li class="active">
+                    <a href="anketa.html">Моя анкета</a>
+                </li>
+                <li>
+                    <a href="promo.html">Мои акции</a>
+                </li>
+                <li>
+                    <a href="education.html">Обучение</a>
+                </li>
+                <li>
+                    <a href="#">Помощь</a>
+                </li>
+                <li>
+                    <a href="ivite.html">Пригласить друга</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="container-custom anketa">
+
+    <p>Это анкета агента Buzzaar – ваш пропуск к новинкам и сюрпризам. Убедитесь, что личные данные, размещенные ниже,
+        указаны верно. Мы будем приглашать вас в те акции, которые интересны именно вам.</p>
+
+    <form class="form-wrapper">
+        <h3>Контактные данные</h3>
+        <div class="form-group">
+            <label class="control-label" for="firstName">Фамилия</label>
+            <input id="firstName" name="textinput" type="text" placeholder="Фамилия"
+                   class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="lastName">Имя</label>
+            <input id="lastName" name="textinput" type="text" placeholder="Имя"
+                   class="form-control">
+        </div>
+
+        <div class="form-group wrapper wrapper-date">
+            <label class="control-label">Дата рождения</label>
+            <div class="bDay">
+                <select id="bDay" name="selectbasic" class="form-control">
+                    <option value="" disabled selected>Day</option>
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                </select>
+            </div>
+            <div class="bMonth">
+                <select id="bMonth" name="selectbasic" class="form-control no-side-border">
+                    <option value="" disabled selected>Month</option>
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                </select>
+            </div>
+            <div class="bYear">
+                <select id="bYear" name="selectbasic" class="form-control">
+                    <option value="" disabled selected>1986</option>
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Пол</label>
+            <div class="">
+                <label class="radio-inline custom" for="man">
+                    <input type="radio" name="radios" id="man" value="man">
+                    Мужчина
+                </label>
+                <label class="radio-inline custom" for="woman">
+                    <input type="radio" name="radios" id="woman" value="woman">
+                    Женщина
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="email">E-mail</label>
+            <input id="email" name="textinput" type="email" placeholder="E-mail"
+                   class="form-control">
+            <!--todo fix label-->
+            <!--<label class="control-label" for="email">E-mail</label>-->
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="country">Страна</label>
+            <select id="country" name="selectbasic" class="form-control">
+                <option value="" disabled selected>Украина</option>
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+            </select>
+        </div>
+
+        <div class="form-group wrapper wrapper-city">
+            <div class="city">
+                <label class="control-label" for="city">Город</label>
+                <select id="city" name="selectbasic" class="form-control">
+                    <option value="" disabled selected>Днепропетровск</option>
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                </select>
+            </div>
+            <div class="index">
+                <label class="control-label" for="index">Индекс</label>
+                <input id="index" name="textinput" type="email" placeholder="Введите индекс" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group wrapper wrapper-adress">
+            <div class="adress">
+                <label class="control-label" for="adres">Адрес (ул. / пр-т. / пер.)</label>
+                <input id="adres" name="textinput" type="text" placeholder="Введите адрес"
+                       class="form-control">
+            </div>
+            <div class="house">
+                <label class="control-label" for="house">Дом</label>
+                <input id="house" name="textinput" type="text" placeholder=""
+                       class="form-control no-side-border">
+            </div>
+            <div class="apartment">
+                <label class="control-label" for="apartment">Квартира</label>
+                <input id="apartment" name="textinput" type="text" placeholder=""
+                       class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group wrapper wrapper-phone">
+            <label class="control-label" for="tel">Контактный телефон</label>
+            <div class="code">
+                <select id="code" name="selectbasic" class="form-control">
+                    <option value="" disabled selected></option>
+                    <option value="1">UA <b>+38</b></option>
+                    <option value="2">USA <b>+1</b></option>
+                </select>
+            </div>
+            <div class="tel">
+                <input id="tel" name="textinput" type="tel" placeholder="Введите номер телефона"
+                       class="form-control">
+            </div>
+        </div>
+
+        <h3>Социальная жизнь</h3>
+
+        <div class="form-group wrapper wrapper-social">
+            <label class="control-label">Свяжите Ваш профиль с аккаунтом соцсети</label>
+            <div class="social">
+                <div class="inner fb"><i></i></div>
+                <input id="fb" name="textinput" type="text" placeholder="Введите адрес" class="form-control">
+            </div>
+
+            <div class="social">
+                <div class="inner vk"><i></i></div>
+                <input id="vk" name="textinput" type="text" placeholder="Введите адрес" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group wrapper wrapper-frends">
+            <label class="control-label">Количество друзей</label>
+            <div class="inner">
+                <i class="icon fb"></i>
+                <span class="counter">102</span>
+            </div>
+            <div class="inner">
+                <i class="icon vk"></i>
+                <span class="counter">1 235</span>
+            </div>
+        </div>
+        <h3>Информация о вас</h3>
+
+        <div class="form-group">
+            <label class="control-label">Чем Вы занимаетесь?</label>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-1">
+                        <input type="radio" name="radios" id="info-1" value="1">
+                        Я школьник, учусь в школе/лицее
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-2">
+                        <input type="radio" name="radios" id="info-2" value="2">
+                        Я студент, учусь в ВУЗе/ техникуме
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-3">
+                        <input type="radio" name="radios" id="info-3" value="3">
+                        Я офисный работник
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-4">
+                        <input type="radio" name="radios" id="info-4" value="4">
+                        Я домохозяйка, занимаюсь домом и семьей
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-5">
+                        <input type="radio" name="radios" id="info-5" value="5">
+                        Я мама, занимаюсь детьми
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-6">
+                        <input type="radio" name="radios" id="info-6" value="6">
+                        Я творческий человек, рисую/пишу/творю/пою/танцую
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-7">
+                        <input type="radio" name="radios" id="info-7" value="7">
+                        Я врач/медицинский работник
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-8">
+                        <input type="radio" name="radios" id="info-8" value="8">
+                        Я пенсионер
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-9">
+                        <input type="radio" name="radios" id="info-9" value="9">
+                        Я парикмахер/визажист/мастер маникюра/сфера красоты
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-10">
+                        <input type="radio" name="radios" id="info-10" value="10">
+                        Я таксист
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="info-11">
+                        <input type="radio" name="radios" id="info-11" value="11">
+                        Ничего из вышеперечисленного
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Семейное положение</label>
+            <div class="">
+                <div class="radio custom">
+                    <label for="family-1">
+                        <input type="radio" name="radios" id="family-1" value="1">
+                        женат/замужем
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="family-2">
+                        <input type="radio" name="radios" id="family-2" value="2">
+                        гражданский брак/состою в отношениях
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="family-3">
+                        <input type="radio" name="radios" id="family-3" value="3">
+                        холост/не замужем
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Есть ли у Вас дети?</label>
+            <div class="">
+                <label class="checkbox-inline custom" for="checkboxes-0">
+                    <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                    Yes
+                </label>
+                <label class="checkbox-inline custom" for="checkboxes-1">
+                    <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                    I am pregnant
+                </label>
+                <label class="checkbox-inline custom" for="checkboxes-2">
+                    <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="childCount">How many kids do you have?</label>
+            <select id="childCount" name="selectbasic" class="form-control">
+                <option value="" disabled selected>-1</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">First Child</label>
+
+            <div class="childWrapper">
+                <div class="form-group">
+                    <label class="control-label">Sex</label>
+                    <label class="radio-inline custom" for="sex-1">
+                        <input type="radio" name="radios" id="sex-1" value="man">
+                        Male
+                    </label>
+                    <label class="radio-inline custom" for="sex-2">
+                        <input type="radio" name="radios" id="sex-2" value="woman">
+                        Female
+                    </label>
+                </div>
+                <div class="form-group wrapper wrapper-date">
+                    <label class="control-label">Date of birth</label>
+                    <div class="bDay">
+                        <select id="bDay" name="selectbasic" class="form-control">
+                            <option value="" disabled selected>Day</option>
+                            <option value="1">Option one</option>
+                            <option value="2">Option two</option>
+                        </select>
+                    </div>
+                    <div class="bMonth">
+                        <select id="bMonth" name="selectbasic" class="form-control no-side-border">
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">Option one</option>
+                            <option value="2">Option two</option>
+                        </select>
+                    </div>
+                    <div class="bYear">
+                        <select id="bYear" name="selectbasic" class="form-control">
+                            <option value="" disabled selected>1986</option>
+                            <option value="1">Option one</option>
+                            <option value="2">Option two</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>У вас есть ломашнее животное?</label>
+            <div class="">
+                <div class="radio custom">
+                    <label for="pet-1">
+                        <input type="radio" name="radios" id="pet-1" value="1">
+                        Кошка
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="pet-2">
+                        <input type="radio" name="radios" id="pet-2" value="2">
+                        Собака
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="pet-3">
+                        <input type="radio" name="radios" id="pet-3" value="3">
+                        Попугай, канарейка
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="pet-4">
+                        <input type="radio" name="radios" id="pet-4" value="4">
+                        Рыбки
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="pet-5">
+                        <input type="radio" name="radios" id="pet-5" value="5">
+                        Другое
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="pet-6">
+                        <input type="radio" name="radios" id="pet-6" value="6">
+                        Нет домашних животных
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Какой техникой Вы пользуетесь?</label>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-1">
+                        <input type="radio" name="radios" id="tech-1" value="1">
+                        Плазменный, LCD телевизор
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-2">
+                        <input type="radio" name="radios" id="tech-2" value="2">
+                        Домашний кинотеатр
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-3">
+                        <input type="radio" name="radios" id="tech-3" value="3">
+                        Гаджет Apple (iPhone, iPad, iMac)
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-4">
+                        <input type="radio" name="radios" id="tech-4" value="4">
+                        Планшет
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-5">
+                        <input type="radio" name="radios" id="tech-5" value="5">
+                        Игровые приставки
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-6">
+                        <input type="radio" name="radios" id="tech-6" value="6">
+                        Профессиональный фотоаппарат
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-7">
+                        <input type="radio" name="radios" id="tech-7" value="7">
+                        Посудомоечная машина
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="tech-8">
+                        <input type="radio" name="radios" id="tech-8" value="8">
+                        Ничего из вышеперечисленного
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Вы курите?</label>
+            <div class="">
+                <label class="radio-inline custom" for="smokeYes">
+                    <input type="radio" name="radios" id="smokeYes" value="smokeYes">
+                    Да
+                </label>
+                <label class="radio-inline custom" for="smokeNo">
+                    <input type="radio" name="radios" id="smokeNo" value="smokeNo">
+                    Нет
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Чем Вы занимаетесь?</label>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-1">
+                        <input type="radio" name="radios" id="category-1" value="1">
+                        Товары для детей
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-2">
+                        <input type="radio" name="radios" id="category-2" value="2">
+                        Косметика и парфюмерия
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-3">
+                        <input type="radio" name="radios" id="category-3" value="3">
+                        Техника и IT
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-4">
+                        <input type="radio" name="radios" id="category-4" value="4">
+                        Игры (настольные, компьютерные)
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-5">
+                        <input type="radio" name="radios" id="category-5" value="5">
+                        Снэки (сухарики, чипсы, орешки, шоколадные батончики, конфеты, крекеры, др.)
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-6">
+                        <input type="radio" name="radios" id="category-6" value="6">
+                        Гигиенические товары (зубная паста, зубные щетки, гели для душа, дезодоранты, туалетное мыло,
+                        шампунь, бальзамы и кондиционеры для волос, др.)
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-7">
+                        <input type="radio" name="radios" id="category-7" value="7">
+                        Товары для здоровья
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-8">
+                        <input type="radio" name="radios" id="category-8" value="8">
+                        Товары для женщин (колготки, средства для эпиляции, декоративная косметика, др.)
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-9">
+                        <input type="radio" name="radios" id="category-9" value="9">
+                        Товары для мужчин (средства для бритья, станки др.)
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-10">
+                        <input type="radio" name="radios" id="category-10" value="10">
+                        Обувь
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-11">
+                        <input type="radio" name="radios" id="category-11" value="11">
+                        Одежда
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-12">
+                        <input type="radio" name="radios" id="category-12" value="12">
+                        Продукты питания
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-13">
+                        <input type="radio" name="radios" id="category-13" value="13">
+                        Алкогольная продукция
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-14">
+                        <input type="radio" name="radios" id="category-14" value="14">
+                        Безалкогольная продукция
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-15">
+                        <input type="radio" name="radios" id="category-15" value="15">
+                        Сигареты, табак
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-16">
+                        <input type="radio" name="radios" id="category-16" value="16">
+                        Товары для домашних животных
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-17">
+                        <input type="radio" name="radios" id="category-17" value="17">
+                        Бытовая химия, товары для дома
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="category-18">
+                        <input type="radio" name="radios" id="category-18" value="18">
+                        Для автомобиля
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Вам интересно принимать участие в акциях алкогольных брендов?</label>
+            <div class="">
+                <label class="radio-inline custom" for="alcoholPromoYes">
+                    <input type="radio" name="radios" id="alcoholPromoYes" value="smokeYes">
+                    Да
+                </label>
+                <label class="radio-inline custom" for="alcoholPromoNo">
+                    <input type="radio" name="radios" id="alcoholPromoNo" value="smokeNo">
+                    Нет
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Какие из брендов представленных ниже вы любите и используете?</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-1">
+                            <input type="checkbox" name="radios" id="brand-1" value="1">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-2">
+                            <input type="checkbox" name="radios" id="brand-2" value="2">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-3">
+                            <input type="checkbox" name="radios" id="brand-3" value="3">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-4">
+                            <input type="checkbox" name="radios" id="brand-4" value="4">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-5">
+                            <input type="checkbox" name="radios" id="brand-5" value="5">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-6">
+                            <input type="checkbox" name="radios" id="brand-6" value="6">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-7">
+                            <input type="checkbox" name="radios" id="brand-7" value="7">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-8">
+                            <input type="checkbox" name="radios" id="brand-8" value="8">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-9">
+                            <input type="checkbox" name="radios" id="brand-9" value="9">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-10">
+                            <input type="checkbox" name="radios" id="brand-10" value="10">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-11">
+                            <input type="checkbox" name="radios" id="brand-11" value="11">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-12">
+                            <input type="checkbox" name="radios" id="brand-12" value="12">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-13">
+                            <input type="checkbox" name="radios" id="brand-13" value="13">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-14">
+                            <input type="checkbox" name="radios" id="brand-14" value="14">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-15">
+                            <input type="checkbox" name="radios" id="brand-15" value="15">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-16">
+                            <input type="checkbox" name="radios" id="brand-16" value="16">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-17">
+                            <input type="checkbox" name="radios" id="brand-17" value="17">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-18">
+                            <input type="checkbox" name="radios" id="brand-18" value="18">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-19">
+                            <input type="checkbox" name="radios" id="brand-19" value="19">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-20">
+                            <input type="checkbox" name="radios" id="brand-20" value="20">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-21">
+                            <input type="checkbox" name="radios" id="brand-21" value="21">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-22">
+                            <input type="checkbox" name="radios" id="brand-22" value="22">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-23">
+                            <input type="checkbox" name="radios" id="brand-23" value="23">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-24">
+                            <input type="checkbox" name="radios" id="brand-24" value="24">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-25">
+                            <input type="checkbox" name="radios" id="brand-25" value="25">
+                            Samsung
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-26">
+                            <input type="checkbox" name="radios" id="brand-26" value="26">
+                            Apple
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox custom">
+                        <label for="brand-27">
+                            <input type="checkbox" name="radios" id="brand-27" value="27">
+                            Phillips
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Семейное положение</label>
+            <div class="">
+                <div class="radio custom">
+                    <label for="income-1">
+                        <input type="radio" name="radios" id="income-1" value="1">
+                        Ни в чем себе не отказываю
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="income-2">
+                        <input type="radio" name="radios" id="income-2" value="2">
+                        Иногда могу позволить себе крупную покупку
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="income-3">
+                        <input type="radio" name="radios" id="income-3" value="3">
+                        Хватает на самое необходимое
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="radio custom">
+                    <label for="income-4">
+                        <input type="radio" name="radios" id="income-4" value="34">
+                        Едва свожу концы с концами
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <h3>Подписка на рассылку</h3>
+        <div class="form-group">
+            <label>Какие из брендов представленных ниже вы любите и используете?</label>
+            <div class="">
+                <div class="checkbox custom">
+                    <label for="subscribe-1">
+                        <input type="checkbox" name="radios" id="subscribe-1" value="1">
+                        Наши акции
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="checkbox custom">
+                    <label for="subscribe-2">
+                        <input type="checkbox" name="radios" id="subscribe-2" value="2">
+                        Наше содружество
+                    </label>
+                </div>
+            </div>
+            <div class="">
+                <div class="checkbox custom">
+                    <label for="subscribe-3">
+                        <input type="checkbox" name="radios" id="subscribe-3" value="3">
+                        Новости Buzzaar и партнеров
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <h3>пароль</h3>
+        <div class="form-group">
+            <input id="pass" name="textinput" type="password" placeholder="Введите пароль"
+                   class="form-control">
+        </div>
+
+        <button class="btn waves-effect waves-light btn-blue btn-large" type="submit">SAVE<i
+                class="glyphicon glyphicon-chevron-right"></i></button>
+    </form>
+    <h3>Удаление аккаунта</h3>
+
+    <p class="bottomInfo form-group">Дорогой агент, если вы хотите покинуть Buzzaar, вы можете это сделать, нажав «<a
+            href="#">Удалить
+        аккаунт</a>».
+        <span>Нам очень жаль с вами расставаться, ведь после удаления аккаунта вы не сможете принимать участие в акциях Buzzaar и потеряете все накопленные баззарчики. Пожалуйста, подумайте еще раз, перед тем как удалять свой аккаунт!</span>
+    </p>
+
+
+</div>
+
+<script type="text/javascript" src="js/inc-swiper.js"></script>
+
+
+<div class="box-bnr text-center">
+    <a href="#"><img src="img/img1.jpg"></a>
+</div>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="socials-box">
+            <ul class="socials clearfix">
+                <li class="vk"><a href="#"></a></li>
+                <li class="inst"><a href="#"></a></li>
+                <li class="fb"><a href="#"></a></li>
+                <li class="tw"><a href="#"></a></li>
+            </ul>
+        </div>
+        <span class="copy">© BUZZAAR HOLDING LIMITED, 2006–2016</span>
+        <span>Some materials may be intended for persons over 16 years.</span>
+        <span>The member of WOMMA.</span>
+        <div class="womma-logo">
+            <span>OUR PARTNER</span>
+            <a href="#"><img src="img/womma.png" width="148"></a>
+        </div>
+    </div>
+</footer>
+
+<div class="sidebar-overlay"></div>
+</body>
+</html>
