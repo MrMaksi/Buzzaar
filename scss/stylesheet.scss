@@ -45,6 +45,9 @@ $mercury: #e5e5e5;
   }
 }
 
+.no-min {
+  min-width: auto;
+}
 
 .icon {
   display: inline-block;
@@ -82,7 +85,7 @@ $mercury: #e5e5e5;
     &.time {
       width: 18px;
       height: 22px;
-      background-position: -181px -10px;
+      background-position: -10px -111px;
     }
   }
 }
@@ -158,6 +161,31 @@ $mercury: #e5e5e5;
       }
     }
   }
+  &.rounded {
+    input[type='checkbox'] {
+      &:before {
+        border-radius: 50%;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 8px;
+        height: 8px;
+        border: none;
+        border-radius: 50px;
+        background-color: transparent;
+        transform: none;
+      }
+      &:checked {
+        &:after {
+          background-color: #252525;
+        }
+      }
+    }
+  }
 }
 
 .container-custom {
@@ -172,6 +200,9 @@ $mercury: #e5e5e5;
   border: 1px solid $ruby;
   background-color: #fff;
   color: $ruby;
+  &:focus {
+    background-color: #ececec;
+  }
 }
 
 .top-profile {
@@ -229,6 +260,7 @@ $mercury: #e5e5e5;
       line-height: 56px;
     }
     .count {
+      position: relative;
       margin-bottom: 0;
       margin-left: 6px;
       padding: 3px 13px;
@@ -238,6 +270,7 @@ $mercury: #e5e5e5;
       vertical-align: middle;
       font-weight: 700;
       font-size: 26px;
+      z-index: 1;
 
       @include breakpoint(extra-small) {
         position: absolute;
@@ -247,6 +280,23 @@ $mercury: #e5e5e5;
         margin: auto;
         width: 120px;
         border: 3px solid #fff;
+      }
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        //z-index: -1;
+        top: -3px;
+        width: 50px;
+        height: 50px;
+        //border: 3px solid blue;
+        border-radius: 50%;
+      }
+      &:before {
+        right: -3px;
+      }
+      &:after {
+        left: -3px;
       }
       i.icon {
         margin-bottom: 5px;
@@ -267,6 +317,8 @@ $mercury: #e5e5e5;
       text-align: center;
     }
     li {
+      position: relative;
+      z-index: 1;
       display: inline-block;
       margin: 0 10px;
       line-height: 16px;
@@ -296,14 +348,22 @@ $mercury: #e5e5e5;
         }
       }
       &.active {
-        a {
+        &:before {
+          content: '';
+          position: absolute;
+          top: -3px;
+          left: -9px;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
           background-image: url(../img/icon-menu.png);
-          background-position: center;
+          background-position: left center;
           background-size: contain;
           background-repeat: no-repeat;
 
           @include breakpoint(extra-small) {
             background-image: url(../img/icon-menu-mobile.png);
+            background-position: center;
           }
         }
       }
@@ -324,10 +384,35 @@ $mercury: #e5e5e5;
 .yourCard {
   margin-top: 30px;
   .card {
+    position: relative;
     margin-top: 30px;
+    max-width: 269px;
+    width: 100%;
+    height: 288px;
+    background-image: url(../img/yourCard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 
     @include breakpoint(extra-small) {
-      margin-top: 0;
+      margin: auto;
+    }
+    .number {
+      position: absolute;
+      top: 109px;
+      left: 34px;
+      color: #fff;
+      letter-spacing: 1px;
+
+      @include breakpoint(small) {
+        top: 90px;
+        left: 28px;
+        span:not(last-child) {
+          padding-right: 7px;
+        }
+      }
+      span:not(last-child) {
+        padding-right: 10px;
+      }
     }
   }
   h3 {
@@ -371,8 +456,11 @@ $mercury: #e5e5e5;
       background-color: $mercury;
       text-transform: uppercase;
       font-size: 11px;
-      th:nth-child(1) {
-        padding-left: 25px;
+      th {
+        height: 34px;
+        &:nth-child(1) {
+          padding-left: 25px;
+        }
       }
     }
     > tbody {
@@ -380,12 +468,17 @@ $mercury: #e5e5e5;
       > tr {
         background-color: $whiteSmoke;
         > td {
+          width: 55%;
           border-top: 2px solid #fff;
+          vertical-align: middle;
           &:nth-child(1) {
             padding-left: 25px;
+            width: 20%;
           }
           &:nth-child(2) {
+            width: 25%;
             text-align: center;
+            font-weight: 700;
           }
         }
       }
@@ -420,7 +513,10 @@ $mercury: #e5e5e5;
         height: 100%;
       }
       &.active {
-        opacity: .5;
+        background-color: #e5e5e5;
+        a {
+          color: #7f7f7f;
+        }
       }
       &:first-child {
         margin-left: 0;
@@ -464,6 +560,7 @@ $mercury: #e5e5e5;
           &:nth-child(2) {
             width: 60px;
             text-align: right;
+            font-weight: 700;
           }
         }
       }
@@ -477,6 +574,7 @@ $mercury: #e5e5e5;
 .popover {
   border-radius: 0;
   background-color: $turquoise;
+  box-shadow: none;
 }
 
 .popover {
@@ -554,11 +652,23 @@ $mercury: #e5e5e5;
       width: 268px;
 
       @include breakpoint(small) {
-        width: 220px;
+        min-width: 100%;
+        width: 100%;
       }
       @include breakpoint(extra-small) {
         display: block;
         margin: auto;
+      }
+      &-pink {
+        .ico-arrow-right {
+          background-position: -30px -19px;
+          @media screen and (max-width: 1050px) {
+            background-position: -23px 0;
+          }
+        }
+      }
+      .ico-arrow-right {
+        top: 5px;
       }
     }
     span {
@@ -573,20 +683,27 @@ $mercury: #e5e5e5;
 
 // Education
 .question {
+  .btn {
+    width: 270px;
+    .ico-arrow-right {
+      top: 16px;
+    }
+  }
   .nav-tabs {
     margin: 50px 0 60px;
     border-bottom: none;
     text-align: center;
+    font-size: 0;
     li {
       position: relative;
       display: inline-block;
       float: none;
       vertical-align: middle;
       &:not(:last-child) {
-        padding-right: 36px;
+        padding-right: 40px;
 
         @include breakpoint(small) {
-          padding-right: 18px;
+          padding-right: 20px;
         }
         @include breakpoint(extra-small) {
           padding-right: 9px;
@@ -595,7 +712,7 @@ $mercury: #e5e5e5;
           content: '. . .';
           position: absolute;
           top: 0;
-          right: 0;
+          right: 3px;
           display: block;
           color: $turquoise;
           font-weight: 700;
@@ -604,10 +721,11 @@ $mercury: #e5e5e5;
 
           @include breakpoint(small) {
             content: '.';
-            right: 4px;
+            right: 5px;
           }
           @include breakpoint(extra-small) {
             content: '.';
+            right: 1px;
             line-height: 7px;
           }
         }
@@ -647,7 +765,7 @@ $mercury: #e5e5e5;
       &.active {
         &:before {
           @include breakpoint(extra-small) {
-            line-height: 27px;
+            line-height: 29px;
           }
         }
         a {
@@ -763,7 +881,7 @@ $mercury: #e5e5e5;
         width: 90%;
       }
 
-      span {
+      .find {
         font-weight: 100;
         font-size: 17px;
         line-height: 23px;
@@ -777,16 +895,20 @@ $mercury: #e5e5e5;
         width: 100%;
         height: 50px;
         border: 1px solid #ccc;
+        background-color: transparent;
         transition: all .15s ease-in-out;
       }
       .search-label {
         position: absolute;
         top: 0;
         right: 0;
+        padding: 0;
         padding-top: 15px;
         padding-right: 5px;
         width: 40px;
         height: 100%;
+        border: none;
+        background-color: transparent;
         font-size: 16px;
         cursor: pointer;
         transition: all .15s ease-in-out;
@@ -855,7 +977,7 @@ $mercury: #e5e5e5;
     font-size: 17px;
     line-height: 27px;
   }
-  h4 {
+  a {
     color: $ruby;
     font-weight: 700;
     font-size: 26px;
@@ -876,6 +998,13 @@ $mercury: #e5e5e5;
 
 //Anketa
 .anketa {
+  select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+    &:-ms-expand {
+      display: none;
+    }
+  }
   p {
     font-weight: 100;
     font-size: 17px;
@@ -887,6 +1016,9 @@ $mercury: #e5e5e5;
   .radio-inline, .checkbox-inline, .radio label, .checkbox label {
     padding-left: 30px;
     font-weight: 700;
+  }
+  .radio.custom input[type='radio']:before, .radio-inline.custom input[type='radio']:before, .checkbox.custom input[type='checkbox']:before, .checkbox-inline.custom input[type='checkbox']:before {
+    border-color: #ccc;
   }
   .no-side-border {
     border-width: 1px 0;
@@ -918,6 +1050,7 @@ $mercury: #e5e5e5;
       &-city {
         > div {
           width: 50%;
+          vertical-align: middle;
           &:first-child {
             padding-right: 10px;
           }
@@ -941,6 +1074,7 @@ $mercury: #e5e5e5;
       &-phone {
         > div {
           width: 81%;
+          vertical-align: middle;
           &:nth-child(2) {
             width: 19%;
           }
@@ -1034,23 +1168,42 @@ $mercury: #e5e5e5;
     }
 
     .childWrapper {
-      padding: 20px;
+      padding: 16px 20px;
       background-color: $whiteSmoke;
       font-size: 0;
       .control-label {
         display: block;
       }
+
       .form-group {
         display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
         &:first-child {
           width: 35%;
           @media screen and (max-width: 570px) {
             display: block;
+            margin-bottom: 15px;
             width: 100%;
+          }
+
+          .control-label {
+            margin-top: -10px;
+            padding-bottom: 12px;
+
+            @include breakpoint(extra-small) {
+              display: inline-block;
+              margin: 0;
+              padding: 0 15px 0 0;
+              vertical-align: middle;
+            }
           }
         }
         &:last-child {
           width: 65%;
+          @media screen and (max-width: 570px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -1110,6 +1263,8 @@ $mercury: #e5e5e5;
   }
 
   .form-control {
+    height: 48px;
+
     @include placeholder {
       transition: .3s;
     }
@@ -1124,14 +1279,17 @@ $mercury: #e5e5e5;
     font-weight: 100;
     font-size: 17px;
   }
-  input, select, .inner {
-    height: 50px;
+  input:not([type='radio']):not([type='checkbox']), select, .inner {
+    height: 48px;
     border-radius: 0;
     font-weight: 700;
   }
   button[type=submit] {
     display: block;
     margin: auto;
+  }
+  .deleteAcc {
+    margin-top: 108px;
   }
   .bottomInfo {
     a {

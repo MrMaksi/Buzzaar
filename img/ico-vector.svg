@@ -237,4 +237,27 @@
 	<polyline clip-path="url(#SVGID_24_)" fill="none" stroke="#000" stroke-width="5" stroke-miterlimit="10" points="
 		35.999,58.352 25.647,48 35.999,37.647 	"/>
 </g>
+
+<g>
+	<g>
+		<g>
+			<g>
+				<g>
+					<g>
+						<g>
+							<defs>
+								<rect id="SVGID_25_" x="29.5" y="18.9" width="10" height="15.7"/>
+							</defs>
+							<clipPath id="SVGID_26_">
+								<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+							</clipPath>
+							<polyline  fill="none" stroke="#ffffff" stroke-width="3.0471" stroke-miterlimit="10" points="30.6,19.9 37.3,26.7 30.6,33.5 							"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+
 </svg>
